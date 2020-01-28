@@ -61,8 +61,6 @@
     <Compile Include="Assets\Scripts\LogicalAnd.cs" />
     <Compile Include="Assets\Scripts\LogicalElement.cs" />
     <Compile Include="Assets\Scripts\LogicalInput.cs" />
-    <Compile Include="Assets\Scripts\LogicalInput2.cs" />
-    <Compile Include="Assets\Scripts\LogicalInput3.cs" />
     <Compile Include="Assets\Scripts\LogicalNot.cs" />
     <Compile Include="Assets\Scripts\LogicalOr.cs" />
     <Compile Include="Assets\Scripts\LogicalOutput.cs" />

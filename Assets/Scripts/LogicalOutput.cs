@@ -10,22 +10,18 @@ public class LogicalOutput : LogicalElement
 	[SerializeField]
 	private Sprite off;
 
-	LogicalAnd la1;
+	[SerializeField]
+	LogicalElement le;
 
 	public void Logical_output(LogicalElement A)
 	{
 		state = A.state;
 	}
 
-	private void Start()
-	{
-		la1 = GameObject.Find("Logical And").GetComponent<LogicalAnd>();
-	}
-
 	private void Update()
 	{
 		sr = GetComponent<SpriteRenderer>();
-		Logical_output(la1);
+		Logical_output(le);
 		SpriteChange(off, on, sr);
 	}
 }

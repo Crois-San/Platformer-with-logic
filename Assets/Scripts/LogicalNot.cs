@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class LogicalNot : LogicalElement
 {
-	 LogicalInput li1;
+	 //LogicalInput li1;
 
+	 [SerializeField] 
+	 private LogicalElement le;
+	 
 	private SpriteRenderer sr;
 
 	[SerializeField]
@@ -16,16 +19,12 @@ public class LogicalNot : LogicalElement
 	{
 		state = !A.state;
 	}
-
-	private void Start()
-	{
-		li1 = GameObject.Find("Logical Input 1").GetComponent<LogicalInput>();
-	}
+	
 
 	private void Update()
 	{
 		sr = GetComponent<SpriteRenderer>();
-		Logical_not(li1);
+		Logical_not(le);
 		SpriteChange(off, on, sr);
 	}
 }

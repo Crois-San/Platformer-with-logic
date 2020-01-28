@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class LogicalOr : LogicalElement
 {
-	 LogicalInput2 li2;
+	 [SerializeField]
+	 LogicalElement le1;
 
-	 LogicalInput3 li3;
+	 [SerializeField]
+	 LogicalElement le2;
 
 	private SpriteRenderer sr;
 
@@ -18,17 +20,12 @@ public class LogicalOr : LogicalElement
 	{
 		state = (A.state || B.state);
 	}
-
-	private void Start()
-	{
-		li2 = GameObject.Find("Logical Input 2").GetComponent<LogicalInput2>();
-		li3 = GameObject.Find("Logical Input 3").GetComponent<LogicalInput3>();
-	}
+	
 
 	private void Update()
 	{
 		sr = GetComponent<SpriteRenderer>();
-		Logical_or(li2, li3);
+		Logical_or(le1, le2);
 		SpriteChange(off, on, sr);
 	}
 }
