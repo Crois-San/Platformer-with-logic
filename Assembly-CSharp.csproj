@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\LogicalNot.cs" />
     <Compile Include="Assets\Scripts\LogicalOr.cs" />
     <Compile Include="Assets\Scripts\LogicalOutput.cs" />
+    <Compile Include="Assets\Scripts\LogicalPiston.cs" />
     <Compile Include="Assets\Scripts\LogicalXor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Unity Projects/LogicalElements/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
