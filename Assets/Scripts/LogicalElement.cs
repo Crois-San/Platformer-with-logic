@@ -5,14 +5,29 @@ using UnityEngine;
 public abstract class LogicalElement : MonoBehaviour
 {
 	public bool state;
+	
+	[SerializeField]
+	protected Sprite on;
+
+	[SerializeField]
+	protected Sprite off;
+	
+	[SerializeField]
+	protected LogicalElement le1;
+
+	[SerializeField]
+	protected LogicalElement le2;
+
+	protected SpriteRenderer sr;
 
 	public bool GetState()
 	{
 		return state;
 	}
 
-	public void SpriteChange(Sprite off, Sprite on, SpriteRenderer sr)
+	protected void SpriteChange()
 	{
+		sr = GetComponent<SpriteRenderer>();
 		if (state)
 		{
 			sr.sprite = on;

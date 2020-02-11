@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\LogicalAnd.cs" />
     <Compile Include="Assets\Scripts\LogicalElement.cs" />
     <Compile Include="Assets\Scripts\LogicalInput.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Assets\Scripts\LogicalOr.cs" />
     <Compile Include="Assets\Scripts\LogicalOutput.cs" />
     <Compile Include="Assets\Scripts\LogicalPiston.cs" />
+    <Compile Include="Assets\Scripts\LogicalWire.cs" />
     <Compile Include="Assets\Scripts\LogicalXor.cs" />
     <None Include="Assets\Scripts\GameTest.asmdef" />
     <Reference Include="UnityEngine.AIModule">

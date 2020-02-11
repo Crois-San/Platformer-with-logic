@@ -2,8 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="865bbe36-cf08-43c6-9a6f-51e33d49f70d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical And.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical And.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical Input.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical Input.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical Not.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical Not.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical Or.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical Or.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical Output.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical Output.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Logical Xor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Logical Xor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalAnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalAnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalNot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalNot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalOr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalOr.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LogicalXor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LogicalXor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WireOff.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WireOff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WireOff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WireOff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WireOn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WireOn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WireOn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/WireOn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GameTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-54feebc71210e4540a.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-54feebc71210e4540a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-d9779752965dd6845b.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-d9779752965dd6845b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/00/00c53b1f4fa018a4a935d36584b2aa8c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00c53b1f4fa018a4a935d36584b2aa8c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1a/1ae24a3ab6377f346b847191ded2cddd" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1a/1ae24a3ab6377f346b847191ded2cddd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/48/48d0a1e70fe0ae24ca9a69aeddc2d21e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/48d0a1e70fe0ae24ca9a69aeddc2d21e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/49/490302a6bd2f10642bd74981921f6a00" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/49/490302a6bd2f10642bd74981921f6a00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/54/54feebc71210e4540a8cd01b3a34a926" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/54/54feebc71210e4540a8cd01b3a34a926" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/56/56672614ccd7a2b45b5ed40ba47a9588" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/56/56672614ccd7a2b45b5ed40ba47a9588" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5d/5d88ccf71f021e34e97de9bb26e2e680" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5d/5d88ccf71f021e34e97de9bb26e2e680" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/60/60a60d8673795924fa160c1d8eb74b1a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/60/60a60d8673795924fa160c1d8eb74b1a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6e/6e68d33a435c607478b05e51fc4b59e2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6e/6e68d33a435c607478b05e51fc4b59e2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/84/84a60801ac03c594bb7af93b76148a9f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/84/84a60801ac03c594bb7af93b76148a9f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/aa/aa6005ad1192b9845bdcbfeb5e211012" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/aa/aa6005ad1192b9845bdcbfeb5e211012" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/b1/b1fb587f86a1d984b902bd330e96eed7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b1/b1fb587f86a1d984b902bd330e96eed7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c3/c3055d02aa2de984fae5a8035d63780e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c3/c3055d02aa2de984fae5a8035d63780e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d0/d053ab51eb534874fa784f2c14895e77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d0/d053ab51eb534874fa784f2c14895e77.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d7/d7e66e55200171d4a9952779b8d274f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d7/d7e66e55200171d4a9952779b8d274f1.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d9/d9779752965dd6845bc3184e27712633" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d9/d9779752965dd6845bc3184e27712633" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d9/d9779752965dd6845bc3184e27712633.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d9/d9779752965dd6845bc3184e27712633.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/f9/f932854099952d946aa1df2c2825ccf8" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f9/f932854099952d946aa1df2c2825ccf8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/ff/ff9f961d654a58c4291cfa57989d44de" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ff/ff9f961d654a58c4291cfa57989d44de" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,23 +78,29 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalAnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalNot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalOr.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalWire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicalElement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalInput3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalInput2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalAnd.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalXor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalNot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalOr.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalAnd.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalXor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LogicalWire.cs" />
       </list>
     </option>
   </component>
@@ -93,6 +155,7 @@
       <workItem from="1580231688267" duration="1745000" />
       <workItem from="1580559578178" duration="6833000" />
       <workItem from="1580725409317" duration="78000" />
+      <workItem from="1581440222050" duration="8460000" />
     </task>
     <servers />
   </component>

@@ -5,17 +5,6 @@ using UnityEngine;
 
 public class LogicalPiston : LogicalElement
 {
-    private SpriteRenderer sr;
-
-    [SerializeField]
-    private Sprite on;
-
-    [SerializeField]
-    private Sprite off;
-
-    [SerializeField]
-    LogicalElement le;
-
     private GameObject pulledObject;
     private Vector2 rayStart;
     private bool isConnected;
@@ -60,9 +49,8 @@ public class LogicalPiston : LogicalElement
     // Update is called once per frame
     void Update()
     {
-        PistonAction(le);
-//        sr = GetComponent<SpriteRenderer>();
-//        SpriteChange(off, on, sr);
+        PistonAction(le1);
+//        SpriteChange();
     }
     
     

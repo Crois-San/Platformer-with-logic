@@ -36,25 +36,12 @@ public class Character : MonoBehaviour
 
 	private GameObject character;
 
-	private void Awake()
+	void Moving(float moving)
 	{
-		body = GetComponent<Rigidbody2D>();
-		character = GetComponent<GameObject>();
-		characterSize = GetComponent<BoxCollider2D>().size;
-		boxSize = new Vector2(characterSize.x, groundedSkin);
-	}
-
-	private void Update()
-	{
-		moving = Input.GetAxis("Moving");
 		body.transform.Translate(moving * speed, 0f, 0f, Space.Self);
-		if (Input.GetButtonDown("Jump") && grounded)
-		{
-			jumpRequest = true;
-		}
 	}
 
-	private void FixedUpdate()
+	void Jumping()
 	{
 		if (jumpRequest)
 		{
@@ -79,5 +66,28 @@ public class Character : MonoBehaviour
 		{
 			body.gravityScale = 1f;
 		}
+	}
+
+	private void Awake()
+	{
+		body = GetComponent<Rigidbody2D>();
+		character = GetComponent<GameObject>();
+		characterSize = GetComponent<BoxCollider2D>().size;
+		boxSize = new Vector2(characterSize.x, groundedSkin);
+	}
+
+	private void Update()
+	{
+		moving = Input.GetAxis("Moving");
+		Moving(moving);
+		if (Input.GetButtonDown("Jump") && grounded)
+		{
+			jumpRequest = true;
+		}
+	}
+
+	private void FixedUpdate()
+	{
+		Jumping();
 	}
 }
