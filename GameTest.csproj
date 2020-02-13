@@ -57,18 +57,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\LogicalAnd.cs" />
-    <Compile Include="Assets\Scripts\LogicalElement.cs" />
-    <Compile Include="Assets\Scripts\LogicalInput.cs" />
-    <Compile Include="Assets\Scripts\LogicalNot.cs" />
-    <Compile Include="Assets\Scripts\LogicalOr.cs" />
-    <Compile Include="Assets\Scripts\LogicalOutput.cs" />
-    <Compile Include="Assets\Scripts\LogicalPiston.cs" />
-    <Compile Include="Assets\Scripts\LogicalWire.cs" />
-    <Compile Include="Assets\Scripts\LogicalXor.cs" />
-    <None Include="Assets\Scripts\GameTest.asmdef" />
+    <Compile Include="Assets\Resources\Scripts\Character.cs" />
+    <Compile Include="Assets\Resources\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalAnd.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalElement.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalInput.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalNot.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalOr.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalOutput.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalPiston.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalWire.cs" />
+    <Compile Include="Assets\Resources\Scripts\LogicalXor.cs" />
+    <None Include="Assets\Resources\Scripts\GameTest.asmdef" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
