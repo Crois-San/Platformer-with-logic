@@ -10,6 +10,7 @@
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="GameTest.asmdef" t="Include" />
+            <e p="inputConnection.cs" t="Include" />
             <e p="LogicalAnd.cs" t="Include" />
             <e p="LogicalElement.cs" t="Include" />
             <e p="LogicalInput.cs" t="Include" />
@@ -19,6 +20,7 @@
             <e p="LogicalPiston.cs" t="Include" />
             <e p="LogicalWire.cs" t="Include" />
             <e p="LogicalXor.cs" t="Include" />
+            <e p="wireAwakening.cs" t="Include" />
           </e>
         </e>
       </e>

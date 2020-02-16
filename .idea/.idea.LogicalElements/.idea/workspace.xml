@@ -2,22 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="865bbe36-cf08-43c6-9a6f-51e33d49f70d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical And.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical And.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Input.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Input.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Not.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Not.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Or.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Or.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Xor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Xor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GameTest.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-643dd3bffb4562744a.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-643dd3bffb4562744a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-6e68d33a435c607478.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-6e68d33a435c607478.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-c3055d02aa2de984fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-c3055d02aa2de984fa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-6e68d33a435c607478.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-6e68d33a435c607478.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/9d/9d4a7a9a0af23584e82c101ba361533f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9d/9d4a7a9a0af23584e82c101ba361533f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/48/48d0a1e70fe0ae24ca9a69aeddc2d21e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/48d0a1e70fe0ae24ca9a69aeddc2d21e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/49/490302a6bd2f10642bd74981921f6a00" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/49/490302a6bd2f10642bd74981921f6a00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/54/54feebc71210e4540a8cd01b3a34a926" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/54/54feebc71210e4540a8cd01b3a34a926" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6e/6e68d33a435c607478b05e51fc4b59e2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6e/6e68d33a435c607478b05e51fc4b59e2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/c3/c3055d02aa2de984fae5a8035d63780e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c3/c3055d02aa2de984fae5a8035d63780e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/de/dee30267146d7754ca6fb89e2579e801" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/de/dee30267146d7754ca6fb89e2579e801" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" afterDir="false" />
     </list>
@@ -31,7 +48,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalOr.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,9 +72,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalWire.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/inputConnection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" />
       </list>
     </option>
   </component>
@@ -89,10 +110,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="9436">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="7840">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9436" />
+      <option name="pid" value="7840" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -120,6 +141,7 @@
       <workItem from="1581755874127" duration="6129000" />
       <workItem from="1581852933133" duration="8428000" />
       <workItem from="1581861762614" duration="8565000" />
+      <workItem from="1581879277733" duration="6851000" />
     </task>
     <servers />
   </component>

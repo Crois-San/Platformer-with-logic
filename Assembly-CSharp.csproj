@@ -57,15 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\LogicalAnd.cs" />
-    <Compile Include="Assets\Scripts\LogicalElement.cs" />
-    <Compile Include="Assets\Scripts\LogicalInput.cs" />
-    <Compile Include="Assets\Scripts\LogicalNot.cs" />
-    <Compile Include="Assets\Scripts\LogicalOr.cs" />
-    <Compile Include="Assets\Scripts\LogicalOutput.cs" />
-    <Compile Include="Assets\Scripts\LogicalPiston.cs" />
-    <Compile Include="Assets\Scripts\LogicalXor.cs" />
+    <Compile Include="Assets\wireAwakening.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Unity Projects/LogicalElements/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -642,6 +634,12 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GameTest.csproj">
+      <Project>{086EAD92-E66F-B3FF-69D1-644001F6FE2E}</Project>
+      <Name>GameTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

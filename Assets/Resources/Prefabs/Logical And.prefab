@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7649143697669563487}
   - component: {fileID: 7649143697669563486}
   m_Layer: 0
-  m_Name: inPointAnd 1
+  m_Name: inPoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 7649143698204063638}
   - component: {fileID: 7649143698204063637}
   m_Layer: 0
-  m_Name: outPointAnd
+  m_Name: outPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 7649143699308016248}
   - component: {fileID: 7649143699308016255}
   m_Layer: 0
-  m_Name: inPointAnd 2
+  m_Name: inPoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

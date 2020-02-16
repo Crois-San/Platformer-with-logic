@@ -14,18 +14,25 @@ public class LogicalWire : LogicalElement
 
     private float distance;
     private Vector2 scale;
-    [SerializeField]
     private Transform inp;
-    [SerializeField]
     private Transform outp;
+
+    public Transform SetInp
+    {
+        set => inp = value;
+    }
+    public Transform SetOutp
+    {
+        set => outp = value;
+    }
+    public LogicalElement GetLe1 => le1;
+    public LogicalElement GetLe2 => le2;
 
     void wirePositionArrangement()
     {
         
         scale = transform.localScale;
-        //startPoint = le1.transform.position;
         startPoint = inp.position;
-        //endPoint = le2.transform.position;
         endPoint = outp.position;
         resultVector = endPoint - startPoint;
         distance = resultVector.magnitude*1.2f;
@@ -46,8 +53,7 @@ public class LogicalWire : LogicalElement
     // Start is called before the first frame update
     void Awake()
     {
-        //inp = le1.gameObject.transform.Find("outPoint");
-        //outp = le2.gameObject.transform.Find("inPoint 1");
+        inp = le1.gameObject.transform.Find("outPoint");
 
     }
 
@@ -57,6 +63,6 @@ public class LogicalWire : LogicalElement
         wirePositionArrangement();
         state=le1.state;
         SpriteChange();
-        
+
     }
 }
