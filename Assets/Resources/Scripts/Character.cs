@@ -3,91 +3,92 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-	[Range(0f, 10f)]
-	public float jumpspeed;
+    [Range(0f, 10f)] public float jumpspeed;
 
-	public LayerMask mask;
+    [SerializeField] protected LayerMask mask;
 
-	private float moving;
+    protected float moving;
 
-	private float speed = 0.2f;
+    protected float speed = 0.2f;
 
-	private float fallMultiplier = 2.5f;
+    protected float fallMultiplier = 2.5f;
 
-	private float lowFallMultiplier = 2f;
+    protected float lowFallMultiplier = 2f;
 
-	private float groundedSkin = 0.5f;
+    protected float groundedSkin = 0.5f;
 
-	private bool jumpRequest;
+    protected bool jumpRequest;
 
-	private bool grounded;
+    protected bool grounded;
 
-	private Vector2 jump;
+    protected Vector2 jump;
 
-	private Vector2 left;
+    protected Vector2 left;
 
-	private Vector2 right;
+    protected Vector2 right;
 
-	private Vector2 boxSize;
+    protected Vector2 boxSize;
 
-	private Vector2 characterSize;
+    protected Vector2 characterSize;
 
-	private Rigidbody2D body;
+    protected Rigidbody2D body;
 
-	private GameObject character;
+    protected SpriteRenderer sr;
 
-	void Moving(float moving)
-	{
-		body.transform.Translate(moving * speed, 0f, 0f, Space.Self);
-	}
+    protected virtual void Moving(float move)
+    {
+        body.transform.Translate(move * speed, 0f, 0f, Space.Self);
+        sr.flipX = move < 0.0f;
+    }
 
-	void Jumping()
-	{
-		if (jumpRequest)
-		{
-			body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
-			jumpRequest = false;
-			grounded = false;
-		}
-		else
-		{
-			Vector2 boxCenter = (Vector2)body.transform.position + 0.5f * (characterSize.y + boxSize.y) * Vector2.down;
-			grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask) != null);
-		}
-		if (body.velocity.y < 0f)
-		{
-			body.gravityScale = fallMultiplier;
-		}
-		else if (body.velocity.y > 0f && !Input.GetButton("Jump"))
-		{
-			body.gravityScale = lowFallMultiplier;
-		}
-		else
-		{
-			body.gravityScale = 1f;
-		}
-	}
+    protected virtual void Jumping()
+    {
+        if (jumpRequest)
+        {
+            body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
+            jumpRequest = false;
+            grounded = false;
+        }
+        else
+        {
+            Vector2 boxCenter = (Vector2) body.transform.position + 0.5f * (characterSize.y + boxSize.y) * Vector2.down;
+            grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask) != null);
+        }
 
-	private void Awake()
-	{
-		body = GetComponent<Rigidbody2D>();
-		character = GetComponent<GameObject>();
-		characterSize = GetComponent<BoxCollider2D>().size;
-		boxSize = new Vector2(characterSize.x, groundedSkin);
-	}
+        if (body.velocity.y < 0f)
+        {
+            body.gravityScale = fallMultiplier;
+        }
+        else if (body.velocity.y > 0f && !Input.GetButton("Jump"))
+        {
+            body.gravityScale = lowFallMultiplier;
+        }
+        else
+        {
+            body.gravityScale = 1f;
+        }
+    }
 
-	private void Update()
-	{
-		moving = Input.GetAxis("Moving");
-		Moving(moving);
-		if (Input.GetButtonDown("Jump") && grounded)
-		{
-			jumpRequest = true;
-		}
-	}
+    protected virtual void Awake()
+    {
+        body = GetComponent<Rigidbody2D>();
+        characterSize = GetComponent<BoxCollider2D>().size;
+        sr = GetComponent<SpriteRenderer>();
+        boxSize = new Vector2(characterSize.x, groundedSkin);
+    }
 
-	private void FixedUpdate()
-	{
-		Jumping();
-	}
+    protected virtual void Update()
+    {
+        moving = Input.GetAxis("Moving");
+        Moving(moving);
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            jumpRequest = true;
+        }
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        Jumping();
+    }
 }

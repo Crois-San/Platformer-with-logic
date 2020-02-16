@@ -14,14 +14,21 @@ public class LogicalWire : LogicalElement
 
     private float distance;
     private Vector2 scale;
+    [SerializeField]
+    private Transform inp;
+    [SerializeField]
+    private Transform outp;
 
     void wirePositionArrangement()
     {
+        
         scale = transform.localScale;
-        startPoint = le1.transform.position;
-        endPoint = le2.transform.position;
+        //startPoint = le1.transform.position;
+        startPoint = inp.position;
+        //endPoint = le2.transform.position;
+        endPoint = outp.position;
         resultVector = endPoint - startPoint;
-        distance = resultVector.magnitude;
+        distance = resultVector.magnitude*1.2f;
         direction = Vector2.Angle(Vector2.right, resultVector);
         Vector3 r = transform.rotation.eulerAngles;
         if (endPoint.y >= startPoint.y)
@@ -32,16 +39,16 @@ public class LogicalWire : LogicalElement
         {
             r.z = -direction;
         }
-        
-        transform.localScale = new Vector2(distance*scale.x/GetComponent<Renderer>().bounds.size.x,1);
         transform.rotation = Quaternion.Euler(r);
+        transform.localScale = new Vector2(distance*scale.x/GetComponent<Renderer>().bounds.size.x,1);
         transform.position = startPoint+resultVector/2;
     }
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //wirePositionArrangement();
-        
+        //inp = le1.gameObject.transform.Find("outPoint");
+        //outp = le2.gameObject.transform.Find("inPoint 1");
+
     }
 
     // Update is called once per frame

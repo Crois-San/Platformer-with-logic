@@ -5,19 +5,21 @@
     <e p="C:\Users\Crois-San\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_LogicalElements.1780058472.00" t="ExcludeRecursive" />
     <e p="E:\Unity Projects\LogicalElements" t="IncludeRecursive">
       <e p="Assets" t="Include">
-        <e p="Scripts" t="Include">
-          <e p="Character.cs" t="Include" />
-          <e p="Enemy.cs" t="Include" />
-          <e p="GameTest.asmdef" t="Include" />
-          <e p="LogicalAnd.cs" t="Include" />
-          <e p="LogicalElement.cs" t="Include" />
-          <e p="LogicalInput.cs" t="Include" />
-          <e p="LogicalNot.cs" t="Include" />
-          <e p="LogicalOr.cs" t="Include" />
-          <e p="LogicalOutput.cs" t="Include" />
-          <e p="LogicalPiston.cs" t="Include" />
-          <e p="LogicalWire.cs" t="Include" />
-          <e p="LogicalXor.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Character.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="GameTest.asmdef" t="Include" />
+            <e p="LogicalAnd.cs" t="Include" />
+            <e p="LogicalElement.cs" t="Include" />
+            <e p="LogicalInput.cs" t="Include" />
+            <e p="LogicalNot.cs" t="Include" />
+            <e p="LogicalOr.cs" t="Include" />
+            <e p="LogicalOutput.cs" t="Include" />
+            <e p="LogicalPiston.cs" t="Include" />
+            <e p="LogicalWire.cs" t="Include" />
+            <e p="LogicalXor.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="GameTest.csproj" t="IncludeRecursive" />
