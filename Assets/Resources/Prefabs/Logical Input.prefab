@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 8214685420214778389}
   - component: {fileID: 8214685420214778388}
   - component: {fileID: 8214685420119982861}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Logical Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}

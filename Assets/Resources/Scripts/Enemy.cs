@@ -1,12 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Character
 {
     private Collider2D[] collidersNextToEntity, collidersUnderEntity, collidersUnderPlatform;
+    private Collider2D input;
     private float timer;
+    private float attentionTimerPlayer;
+    private float lookingForInputTimer;
+    private float attentionTimerInput;
+    [SerializeField]
+    private float speedIdle = 0.05f;
+    [SerializeField]
+    private float speedChasing = 0.1f;
     private float groundHeight;
+    RaycastHit2D raycastResult;
+    private Vector3 rayOriginPoint;
+    [SerializeField]
+    private LayerMask targetPlayerMask,targetInputMask;
+
+    private GameObject targetPlayer, targetInput;
+
+    private float pos;
 
 
     protected override void Moving(float move)
@@ -62,7 +79,8 @@ public class Enemy : Character
 
     void StateIdle()
     {
-        timer += Time.deltaTime % 60;
+        
+        speed = speedIdle;
         if (timer >= 10)
         {
             moving *= -1;
@@ -74,11 +92,54 @@ public class Enemy : Character
 
     void StatePlayerChasing()
     {
+        
+        moving =Mathf.Sign((targetPlayer.transform.position - transform.position).x) ;
+        attentionTimerPlayer += Time.deltaTime % 60;
+        speed = speedChasing;
+        Moving(moving);
+        if (attentionTimerPlayer >= 3)
+        {
+            targetPlayer = null;
+            attentionTimerPlayer = 0;
+        }
+
     }
 
     void StateInputChanging()
     {
+        int foo = (int) (lookingForInputTimer % 10);
+        if (foo == 0 && lookingForInputTimer > 1)
+        {
+            attentionTimerInput += Time.deltaTime % 60;
+            if (attentionTimerInput >= 2)
+            {
+                
+                return;
+            }
+        }
+        else
+        {
+            attentionTimerInput = 0;
+            return;
+        }
+        input = Physics2D.OverlapCircle(transform.position, 5f, targetInputMask);
+        if (!input) return;
+        targetInput = input.gameObject;
+        if (!targetInput) return;
+        if (Mathf.Abs(targetInput.transform.position.x - transform.position.x) <= 0.1f)
+        {
+            jumpRequest = true;
+            Jumping();
+            targetInput = null;
+        }
+        else
+        {
+            moving = Mathf.Sign((targetInput.transform.position - transform.position).x);
+            Moving(moving);
+        }
     }
+
+
 
     // Start is called before the first frame update
     protected override void Awake()
@@ -96,6 +157,24 @@ public class Enemy : Character
 
     protected override void FixedUpdate()
     {
-        StateIdle();
+        timer += Time.deltaTime % 60;
+        lookingForInputTimer += Time.deltaTime % 60;
+        rayOriginPoint = transform.position + moving * characterSize.x * Vector3.right;
+        raycastResult = Physics2D.Raycast(rayOriginPoint, moving*Vector3.right,15f, targetPlayerMask);
+        if (raycastResult)
+        {
+            targetPlayer = raycastResult.collider.gameObject;
+        }
+        if (raycastResult || targetPlayer)
+        {
+            StatePlayerChasing();
+        }
+        else
+        {
+            StateInputChanging();
+            StateIdle();
+        }
+            
+        
     }
 }
