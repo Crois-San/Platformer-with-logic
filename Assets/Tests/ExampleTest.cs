@@ -9,9 +9,7 @@ public class ExampleTest
     [UnityTest]
     public IEnumerator ExampleEnumirator()
     {
-        /**
-         * Тест проверяет работу кнопок при взаимодействии с пользователем
-         */
+        // Тест проверяет работу кнопок при взаимодействии с пользователем
         GameObject characterGameObject = MonoBehaviour.Instantiate(
         Resources.Load<GameObject>("Prefabs/Character"));
         GameObject logicalInputGameObject = MonoBehaviour.Instantiate(
