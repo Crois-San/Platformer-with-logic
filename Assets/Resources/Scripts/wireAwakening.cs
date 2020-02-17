@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,8 +19,9 @@ public class wireAwakening : MonoBehaviour
                 if (leI == leJ)
                 {
 
-                    wires[j].GetComponent<LogicalWire>().SetOutp = leJ.gameObject.transform.Find("inPoint 1");
-                    wires[i].GetComponent<LogicalWire>().SetOutp = leI.gameObject.transform.Find("inPoint 2");
+                    wires[j].GetComponent<LogicalWire>().SetOutp = leJ.gameObject.transform.Find("inPoint 2");
+                    wires[i].GetComponent<LogicalWire>().SetOutp = leI.gameObject.transform.Find("inPoint 1");
+                    
                 }
                 
                 if(leJ is LogicalNot || leJ is LogicalPiston)
@@ -33,4 +35,5 @@ public class wireAwakening : MonoBehaviour
             }
         }
     }
+    
 }

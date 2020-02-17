@@ -2,6 +2,8 @@
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTest", "GameTest.csproj", "{086EAD92-E66F-B3FF-69D1-644001F6FE2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{9914234E-D8AB-D2DA-CBCE-8261C2C14862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,6 +14,10 @@ Global
 		{086EAD92-E66F-B3FF-69D1-644001F6FE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{086EAD92-E66F-B3FF-69D1-644001F6FE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{086EAD92-E66F-B3FF-69D1-644001F6FE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9914234E-D8AB-D2DA-CBCE-8261C2C14862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9914234E-D8AB-D2DA-CBCE-8261C2C14862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9914234E-D8AB-D2DA-CBCE-8261C2C14862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9914234E-D8AB-D2DA-CBCE-8261C2C14862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
