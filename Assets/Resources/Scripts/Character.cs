@@ -35,6 +35,9 @@ public class Character : MonoBehaviour
 
     protected SpriteRenderer sr;
 
+    public bool getJumpRequest => jumpRequest;
+    public bool getGrounded => grounded;
+
     protected virtual void Moving(float move)
     {
         body.transform.Translate(move * speed, 0f, 0f, Space.Self);

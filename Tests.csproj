@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Tests\EnemyTest.cs" />
     <Compile Include="Assets\Tests\ExampleTest.cs" />
     <None Include="Assets\Tests\Tests.asmdef" />
     <Reference Include="UnityEngine.AIModule">

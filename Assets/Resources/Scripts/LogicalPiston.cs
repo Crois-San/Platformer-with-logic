@@ -15,7 +15,9 @@ public class LogicalPiston : LogicalElement
 
     private Vector2 pulledObjPos;
     private float startPos, endPos;
-    
+
+    public bool getConnected => isConnected;
+
     void PistonAction(LogicalElement A)
     {
         state = A.state;

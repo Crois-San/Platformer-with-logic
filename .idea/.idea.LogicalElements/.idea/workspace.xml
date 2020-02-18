@@ -2,28 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="865bbe36-cf08-43c6-9a6f-51e33d49f70d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/EnemyTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/EnemyTest.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/64/643dd3bffb4562744ad9f06782ee2692" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/7f/7fed02298350a8b459ca4ef5d80026ad" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/7f/7fed02298350a8b459ca4ef5d80026ad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/38/3878d338f417c38418e496776433dc00" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/38/3878d338f417c38418e496776433dc00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/56/56672614ccd7a2b45b5ed40ba47a9588" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/56/56672614ccd7a2b45b5ed40ba47a9588" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5d/5d88ccf71f021e34e97de9bb26e2e680" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5d/5d88ccf71f021e34e97de9bb26e2e680" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/9d/9d4a7a9a0af23584e82c101ba361533f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9d/9d4a7a9a0af23584e82c101ba361533f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" afterDir="false" />
     </list>
@@ -38,12 +39,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/ExampleTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/EnemyTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalOr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/LogicalAnd.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,11 +65,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalOutput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalPiston.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LogicalWire.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/inputConnection.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/wireAwakening.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/EnemyTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -133,6 +139,8 @@
       <workItem from="1581879277733" duration="6851000" />
       <workItem from="1581886330710" duration="168000" />
       <workItem from="1581918946532" duration="1960000" />
+      <workItem from="1582008519638" duration="12000" />
+      <workItem from="1582008685427" duration="4017000" />
     </task>
     <servers />
   </component>

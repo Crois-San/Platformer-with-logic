@@ -22,12 +22,18 @@
             <e p="wireAwakening.cs" t="Include" />
           </e>
         </e>
+        <e p="Tests" t="Include">
+          <e p="EnemyTest.cs" t="Include" />
+          <e p="ExampleTest.cs" t="Include" />
+          <e p="Tests.asmdef" t="Include" />
+        </e>
       </e>
       <e p="GameTest.csproj" t="IncludeRecursive" />
       <e p="LogicalElements.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

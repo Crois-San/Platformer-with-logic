@@ -23,7 +23,7 @@ public class Enemy : Character
 
     private GameObject targetPlayer, targetInput;
 
-    private float pos;
+
 
 
     protected override void Moving(float move)
@@ -47,11 +47,14 @@ public class Enemy : Character
             jumpRequest = true; }
 
         Jumping();
-
-        if (collidersUnderEntity.Length == 0 && collidersUnderPlatform.Length == 0 &&!jumpRequest)
-        {
-            moving *= -1;
-        }
+//        if (collidersUnderPlatform != null)
+//        {
+            if (collidersUnderEntity.Length == 0 && collidersUnderPlatform.Length == 0 &&!jumpRequest)
+            {
+                moving *= -1;
+            }
+//        }
+        
 
         base.Moving(move);
     }
@@ -113,7 +116,6 @@ public class Enemy : Character
             attentionTimerInput += Time.deltaTime % 60;
             if (attentionTimerInput >= 2)
             {
-                
                 return;
             }
         }
@@ -131,6 +133,7 @@ public class Enemy : Character
             jumpRequest = true;
             Jumping();
             targetInput = null;
+
         }
         else
         {
