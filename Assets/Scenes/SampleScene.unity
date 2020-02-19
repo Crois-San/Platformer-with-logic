@@ -1801,7 +1801,7 @@ PrefabInstance:
     - target: {fileID: 4809654930796065625, guid: d9779752965dd6845bc3184e27712633,
         type: 3}
       propertyPath: mask.m_Bits
-      value: 5
+      value: 1029
       objectReference: {fileID: 0}
     - target: {fileID: 4809654930796065624, guid: d9779752965dd6845bc3184e27712633,
         type: 3}
@@ -1831,6 +1831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245651116905204212, guid: c32f5d0054c2add4e8951c1fa89e3133,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5245651116905204210, guid: c32f5d0054c2add4e8951c1fa89e3133,
         type: 3}
@@ -2062,12 +2067,12 @@ PrefabInstance:
     - target: {fileID: 8214685420214778394, guid: c3055d02aa2de984fae5a8035d63780e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.05
+      value: -8.98
       objectReference: {fileID: 0}
     - target: {fileID: 8214685420214778394, guid: c3055d02aa2de984fae5a8035d63780e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: -0.84
       objectReference: {fileID: 0}
     - target: {fileID: 8214685420214778394, guid: c3055d02aa2de984fae5a8035d63780e,
         type: 3}
@@ -2113,6 +2118,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214685420214778388, guid: c3055d02aa2de984fae5a8035d63780e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214685420214778388, guid: c3055d02aa2de984fae5a8035d63780e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214685420214778388, guid: c3055d02aa2de984fae5a8035d63780e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.4335308
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214685420214778388, guid: c3055d02aa2de984fae5a8035d63780e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.4335308
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3055d02aa2de984fae5a8035d63780e, type: 3}
