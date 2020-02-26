@@ -44,7 +44,10 @@ public class Enemy : Character
     //объекты игрока и ввода соответственно
     private GameObject targetPlayer, targetInput;
 
-
+    //геттеры
+    public GameObject getTargetPlayer => targetPlayer;
+    public GameObject getTargetInput => targetInput;
+    public Collider2D[] getCollidersNextToEntity => collidersNextToEntity;
 
 
     protected override void Moving(float move)
