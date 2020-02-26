@@ -46,4 +46,5 @@ public abstract class LogicalElement : MonoBehaviour
 			sr.sprite = off;
 		}
 	}
+	
 }
