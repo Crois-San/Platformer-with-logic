@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 5226318260205037540}
   - component: {fileID: 5226318260205037541}
   - component: {fileID: 5226318260205037542}
+  - component: {fileID: 3780307785492520986}
   m_Layer: 0
   m_Name: Logical Xor
   m_TagString: Untagged
@@ -264,6 +265,44 @@ MonoBehaviour:
   off: {fileID: 21300000, guid: 9e6264366f64d67498c3d14a27bc0382, type: 3}
   le1: {fileID: 0}
   le2: {fileID: 0}
+--- !u!114 &3780307785492520986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226318260205037543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.93939066, y: -1.0110162, z: 0}
+  - {x: -0.9180107, y: -1.1859987, z: -0.0000003799796}
+  - {x: 0.42905426, y: -1.1721749, z: 0}
+  - {x: 0.9800787, y: -0.3533461, z: -0.0000003799796}
+  - {x: 1.320302, y: -0.34439301, z: -0.0000003799796}
+  - {x: 1.3113489, y: 0.37186718, z: -0.0000003799796}
+  - {x: 0.9800792, y: 0.3629141, z: -0.0000003799796}
+  - {x: 0.45591497, y: 1.1632218, z: 0}
+  - {x: -0.9180107, y: 1.17766, z: -0.0000003799796}
+  - {x: -0.92148304, y: 1.0199695, z: 0}
+  - {x: -1.3298607, y: 1.0165014, z: -0.0000003799796}
+  - {x: -1.3119535, y: 0.327101, z: -0.0000003799796}
+  - {x: -0.94487, y: 0.300241, z: -0.0000003799796}
+  - {x: -0.95382357, y: -0.30857992, z: -0.0000003799796}
+  - {x: -1.3119535, y: -0.33543968, z: -0.0000003799796}
+  - {x: -1.3477669, y: -0.99798024, z: -0.0000003799796}
+  m_ShapePathHash: -217256647
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 23002
 --- !u!1 &7712192359947859731
 GameObject:
   m_ObjectHideFlags: 0

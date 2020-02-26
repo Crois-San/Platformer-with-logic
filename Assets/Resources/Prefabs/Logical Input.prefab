@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8214685420214778389}
   - component: {fileID: 8214685420214778388}
   - component: {fileID: 8214685420119982861}
+  - component: {fileID: 8854693230416885072}
   m_Layer: 10
   m_Name: Logical Input
   m_TagString: Untagged
@@ -208,3 +209,35 @@ MonoBehaviour:
   off: {fileID: 21300000, guid: c45f7414b55a28b49b438b96ffad2b0e, type: 3}
   le1: {fileID: 0}
   le2: {fileID: 0}
+--- !u!114 &8854693230416885072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214685420214778391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.71746445, y: -0.31341034, z: 0}
+  - {x: -0.47098255, y: -0.7063553, z: -0.0000003799796}
+  - {x: 0.3158579, y: -0.7063553, z: -0.0000003799796}
+  - {x: 0.7387285, y: -0.3346761, z: 0}
+  - {x: 1.2090273, y: -0.30230242, z: -0.0000003799796}
+  - {x: 1.1983943, y: 0.32504308, z: -0.0000003799796}
+  - {x: 0.7199106, y: 0.356942, z: -0.0000003799796}
+  - {x: 0.31341076, y: 0.7706283, z: 0}
+  - {x: -0.34530926, y: 0.79189414, z: 0}
+  - {x: -0.72617435, y: 0.335676, z: -0.0000003799796}
+  m_ShapePathHash: 1747858137
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -11116
