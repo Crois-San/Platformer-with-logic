@@ -24,6 +24,8 @@ public class LogicalWire : LogicalElement
     private Vector2 scale;
     private Transform inp;
     private Transform outp;
+    //свечение логического элемента
+    private GameObject light;
 
     //сеттеры
     public Transform SetInp
@@ -84,7 +86,8 @@ public class LogicalWire : LogicalElement
     {
         //берет координаты точки выхода в элементе выхода
         inp = le1.gameObject.transform.Find("outPoint");
-
+        //находим свечение логического элемента
+        light = transform.Find("LightSource").gameObject;
     }
 
     // Update is called once per frame
@@ -93,6 +96,8 @@ public class LogicalWire : LogicalElement
         wirePositionArrangement();
         state=le1.state;
         SpriteChange();
+        //включаем свечение по сигналу
+        light.SetActive(state);
 
     }
 }
