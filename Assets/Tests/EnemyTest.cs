@@ -16,7 +16,7 @@ public class EnemyTest
 
         Enemy enemy = enemyGameObject.GetComponent<Enemy>();
         Character character = charachterGameObject.GetComponent<Character>();
-        
+
         Vector2 vector2 = new Vector2(enemy.transform.position.x+0.1f, enemy.transform.position.y);
 
         character.transform.position = vector2;

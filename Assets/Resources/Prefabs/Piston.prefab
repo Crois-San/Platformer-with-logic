@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7747443134150071570}
   - component: {fileID: 7747443134150071583}
   - component: {fileID: 6639078919574971944}
+  - component: {fileID: 6890170901433983032}
   m_Layer: 2
   m_Name: Piston
   m_TagString: Untagged
@@ -158,6 +159,25 @@ MonoBehaviour:
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
   m_InstanceId: -30472
+--- !u!95 &6890170901433983032
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747443134150071571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7747443135386470697
 GameObject:
   m_ObjectHideFlags: 0

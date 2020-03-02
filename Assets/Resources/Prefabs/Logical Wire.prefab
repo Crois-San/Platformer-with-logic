@@ -126,7 +126,7 @@ MonoBehaviour:
   - {x: -1.3333333, y: 0.36403823, z: 0}
   m_ShapePathHash: 771204523
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21908
+  m_InstanceId: 16270
 --- !u!1 &8545349353651308645
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_LightVolumeOpacity: 0.15
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
+  m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0.01
@@ -195,7 +195,9 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.8
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.97625613, y: -0.053051114, z: 0}
-  - {x: 1.0625268, y: -0.06229496, z: 0}
-  - {x: 1.0616496, y: 0.047495544, z: 0}
-  - {x: -0.97625256, y: 0.054457366, z: 0}
+  - {x: -0.97625613, y: -0.06611931, z: 0}
+  - {x: 1.0625268, y: -0.07536316, z: 0}
+  - {x: 1.0794432, y: 0.010026574, z: 0.000000029802322}
+  - {x: 1.0616496, y: 0.08016604, z: 0}
+  - {x: -0.97625256, y: 0.087127864, z: 0}
+  - {x: -0.99186015, y: 0.016560674, z: 0.000000029802322}
