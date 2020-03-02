@@ -17,7 +17,7 @@ public class Enemy : Character
      * В состоянии поиска ввода, враг будет пытаться изменить состояние логических элементов схеме, мешая игроку.
      */
     //коллайдеры, нужный для проверки при движении
-    private Collider2D[] collidersNextToEntity, collidersUnderEntity, collidersUnderPlatform;
+    private Collider2D[] collidersNextToEntity, collidersAboveEntity, collidersUnderEntity, collidersUnderPlatform;
     //коллайдер, для поиска ввода 
     private Collider2D input;
     //основной таймер
@@ -60,6 +60,9 @@ public class Enemy : Character
             Physics2D.OverlapCircleAll(
                 transform.position + (characterSize.y / 2 + 0.5f) * Vector3.down + move * (characterSize.x/2 + 0.2f) * Vector3.right, 0.2f,
                 mask);
+        //поиск препятствий над врогом
+        collidersAboveEntity =
+            Physics2D.OverlapCircleAll(transform.position + move * 2.0f * Vector3.right + (characterSize.y / 2 + 0.5f) * Vector3.up, 0.2f, mask);
         /*
          * поиск  платформы под найденной платформой,
          * таким образом враг может спрыгнуть при небольшой высоте
@@ -72,10 +75,14 @@ public class Enemy : Character
                 mask);
         }
         
-        //если есть препятсвие, враг запрыгнет на него
-        if (collidersNextToEntity.Length > 0)
+        //если есть препятсвие, враг запрыгнет на него, если впереди стена, то вместо прыжка развернется
+        if (collidersNextToEntity.Length > 0 && collidersAboveEntity.Length == 0)
         {
-            jumpRequest = true; }
+            jumpRequest = true;
+        } else if (collidersAboveEntity.Length > 0)
+        {
+            moving *= -1;
+        }
 
         Jumping(); 
         // если есть пропасть впереди, враг развернется

@@ -26,10 +26,19 @@ public class LogicalPiston : LogicalElement
     [Range(1,5)] [SerializeField]
     private float pushDistance;
 
+    //объект для анимации поршня
+    private Animator pistonAnim;
+    //позиция рукояти поршня
+    private Transform pistonHead;
+    private Vector2 pistonHeadSize, pistonHeadScale;
+    
+    
+    
     //позиция объекта
     private Vector2 pulledObjPos;
     //начальная и конечная точка объекта
-    private float startPos, endPos;
+    private float startPos, endPos, pistonHeadStartPos, pistonHeadEndPos;
+    private Vector2 pistonHeadPos;
 
     //геттер
     public bool getConnected => isConnected;
@@ -49,15 +58,22 @@ public class LogicalPiston : LogicalElement
                 //отталкивание объекта
                 startPos = pulledObject.transform.position.y;
                 endPos = pulledObjPos.y-pushDistance;
+                pistonHeadStartPos = pistonHead.position.y;
+                pistonHeadEndPos = pistonHeadPos.y - pushDistance;
                 //Math.lerp нужен для плавного перемещения объекта из точки А в точку Б
                 pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
+                pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
+                
             }
             else
             {
                 //притягивание объекта
                 startPos = pulledObject.transform.position.y;
                 endPos = pulledObjPos.y;
+                pistonHeadStartPos = pistonHead.position.y;
+                pistonHeadEndPos = pistonHeadPos.y;
                 pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
+                pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
             }
         }
     }
@@ -66,6 +82,11 @@ public class LogicalPiston : LogicalElement
     {
         //определение точки, из которой начинается поиск объекта 
         rayStart = this.gameObject.transform.position;
+        pistonAnim = GetComponent<Animator>();
+        pistonHead = transform.Find("pistonHead");
+        pistonHeadSize = pistonHead.gameObject.GetComponent<SpriteRenderer>().size;
+        pistonHeadScale = pistonHead.localScale;
+        pistonHeadPos = pistonHead.position;
         /*
          * Собственно поиск объекта.
          * При коллизии с объектом, связывает его с поршнем.
@@ -88,6 +109,9 @@ public class LogicalPiston : LogicalElement
         PistonAction(le1);
 //        SpriteChange();
     }
-    
-    
+
+    private void LateUpdate()
+    {
+        pistonAnim.SetBool("State",state);
+    }
 }
