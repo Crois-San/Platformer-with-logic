@@ -147,19 +147,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
-  m_HasRenderer: 1
+  m_HasRenderer: 0
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -1, y: -1, z: 0}
-  - {x: 1, y: -1, z: 0}
-  - {x: 1, y: 1, z: 0}
-  - {x: -1, y: 1, z: 0}
+  m_ApplyToSortingLayers: 
+  m_ShapePath: []
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 29298
+  m_InstanceId: 0
 --- !u!95 &6890170901433983032
 Animator:
   serializedVersion: 3
