@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 466714269
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb29ff5098fb3704887d5a9d65b59645, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,6 +148,11 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 5
+  speed: 0.2
+  fallMultiplier: 1.1
+  fJumpPressedRememberTime: 0.2
+  fGroundedRememberTime: 0.25
+  fCutJumpHeight: 0.5
   speedIdle: 0.05
   speedChasing: 0.15
   targetPlayerMask:
@@ -197,4 +202,4 @@ MonoBehaviour:
   - {x: -1.2199543, y: -0.5633601, z: 0}
   m_ShapePathHash: -528121544
   m_Mesh: {fileID: 0}
-  m_InstanceId: 19332
+  m_InstanceId: 23162

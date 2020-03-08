@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.9647059, g: 0.1254902, b: 0.12156863, a: 1}
   m_Intensity: 5
   m_LightVolumeOpacity: 0.05
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000dd7020d3d5ac1c7b
   m_LightCookieSprite: {fileID: 21300000, guid: e50e8fba77270b5498d73e5304cf9469,
     type: 3}
   m_UseNormalMap: 1
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Color: {r: 0.9647059, g: 0.1254902, b: 0.12156863, a: 1}
   m_Intensity: 5
   m_LightVolumeOpacity: 0.05
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000dd7020d3d5ac1c7b
   m_LightCookieSprite: {fileID: 21300000, guid: ba196311a00758743b919caf004c39d9,
     type: 3}
   m_UseNormalMap: 1
@@ -495,8 +495,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -752848675
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9e6264366f64d67498c3d14a27bc0382, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -563,7 +563,7 @@ MonoBehaviour:
   - {x: -1.3477669, y: -0.99798024, z: -0.0000003799796}
   m_ShapePathHash: -217256647
   m_Mesh: {fileID: 0}
-  m_InstanceId: 60716
+  m_InstanceId: 24464
 --- !u!114 &8616545823220413019
 MonoBehaviour:
   m_ObjectHideFlags: 0

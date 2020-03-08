@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="Scripts" t="Include">
+            <e p="CameraMovement.cs" t="Include" />
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="GameTest.asmdef" t="Include" />
