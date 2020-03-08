@@ -4,7 +4,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     //скорость/высота прыжка персонажа
-    [Range(0f, 10f)] public float jumpspeed;
+    [SerializeField] [Range(0f, 10f)] protected float jumpspeed;
 
     //маска, нужна, чтобы проверить, стоит ли персонаж на земле 
     [SerializeField] protected LayerMask mask;
@@ -13,15 +13,26 @@ public class Character : MonoBehaviour
     protected float moving;
 
     //скорость движения персонажа
+    [SerializeField] [Range(0f, 1f)]
     protected float speed = 0.2f;
 
     //модификатор гравитации
-    protected float fallMultiplier = 2.5f;
-
-    //альтернативный модификатор графитации
-    protected float lowFallMultiplier = 2f;
+    [SerializeField][Range(1,3)]
+    protected float fallMultiplier = 1.1f;
+    
     
     protected float groundedSkin = 0.5f;
+    
+    float fJumpPressedRemember;
+    [SerializeField]
+    float fJumpPressedRememberTime = 0.2f;
+
+    float fGroundedRemember;
+    [SerializeField]
+    float fGroundedRememberTime = 0.25f;
+    
+    [SerializeField][Range(0, 1)]
+    float fCutJumpHeight = 0.5f;
 
     //Положительное значение этой переменной активирует прыжок
     protected bool jumpRequest;
@@ -61,9 +72,16 @@ public class Character : MonoBehaviour
              * Строка ниже запускает персонажа вверх при прыжке,
              * со скоростью jumpspeed.
              */
-            body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
-            jumpRequest = false;
-            grounded = false;
+            if ((fJumpPressedRemember > 0) && (fGroundedRemember > 0))
+            {
+                fJumpPressedRemember = 0;
+                fGroundedRemember = 0;
+                //body.velocity = new Vector2(body.velocity.x, jumpspeed);
+                body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
+                jumpRequest = false;
+                grounded = false;
+            }
+            
         }
         else
         {
@@ -79,6 +97,25 @@ public class Character : MonoBehaviour
              */
             grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask) != null);
         }
+        fGroundedRemember -= Time.deltaTime;
+        if (grounded)
+        {
+            fGroundedRemember = fGroundedRememberTime;
+        }
+
+        fJumpPressedRemember -= Time.deltaTime;
+        if (Input.GetButtonDown("Jump"))
+        {
+            fJumpPressedRemember = fJumpPressedRememberTime;
+        }
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            if (body.velocity.y > 0)
+            {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y * fCutJumpHeight);
+            }
+        }
 
         /*
          * Увеличение гравитации при падении игрока,
@@ -87,14 +124,6 @@ public class Character : MonoBehaviour
         if (body.velocity.y < 0f)
         {
             body.gravityScale = fallMultiplier;
-        }
-        /*
-         * Если игрок не зажимает клавишу прыжка, а лишь слегка нажал ее,
-         * то персонаж будет прыгнет ниже
-         */
-        else if (body.velocity.y > 0f && !Input.GetButton("Jump"))
-        {
-            body.gravityScale = lowFallMultiplier;
         }
         else
         {
@@ -108,6 +137,7 @@ public class Character : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         characterSize = GetComponent<BoxCollider2D>().size;
         sr = GetComponent<SpriteRenderer>();
+        body.gravityScale = 1f;
         /*
          * Размер области для определения соприкосновения с землей,
          * groundedSkin - высота области.

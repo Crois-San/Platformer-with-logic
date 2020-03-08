@@ -10,6 +10,7 @@
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="GameTest.asmdef" t="Include" />
+            <e p="LightSwitch.cs" t="Include" />
             <e p="LogicalAnd.cs" t="Include" />
             <e p="LogicalElement.cs" t="Include" />
             <e p="LogicalInput.cs" t="Include" />

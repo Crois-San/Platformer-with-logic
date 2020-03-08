@@ -27,7 +27,7 @@ public class LogicalPiston : LogicalElement
     private float pushDistance;
 
     //объект для анимации поршня
-    private Animator pistonAnim;
+    private Animator pistonAnim, pistonLightAnim;
     //позиция рукояти поршня
     private Transform pistonHead;
     private Vector2 pistonHeadSize, pistonHeadScale;
@@ -83,6 +83,7 @@ public class LogicalPiston : LogicalElement
         //определение точки, из которой начинается поиск объекта 
         rayStart = this.gameObject.transform.position;
         pistonAnim = GetComponent<Animator>();
+        pistonLightAnim = transform.Find("LightSource").gameObject.GetComponent<Animator>();
         pistonHead = transform.Find("pistonHead");
         pistonHeadSize = pistonHead.gameObject.GetComponent<SpriteRenderer>().size;
         pistonHeadScale = pistonHead.localScale;
@@ -112,6 +113,9 @@ public class LogicalPiston : LogicalElement
 
     private void LateUpdate()
     {
+        //анимация поршня
         pistonAnim.SetBool("State",state);
+        //анимированный свет на поршне
+        pistonLightAnim.SetBool("State",state);
     }
 }
