@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4a7a9a0af23584e82c101ba361533f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpspeed: 5
+  jumpspeed: 3
   mask:
     serializedVersion: 2
     m_Bits: 5
@@ -153,6 +153,8 @@ MonoBehaviour:
   fJumpPressedRememberTime: 0.2
   fGroundedRememberTime: 0.25
   fCutJumpHeight: 0.5
+  healthPoints: 2
+  damagePoints: 1
   speedIdle: 0.05
   speedChasing: 0.15
   targetPlayerMask:
@@ -202,4 +204,4 @@ MonoBehaviour:
   - {x: -1.2199543, y: -0.5633601, z: 0}
   m_ShapePathHash: -528121544
   m_Mesh: {fileID: 0}
-  m_InstanceId: 23162
+  m_InstanceId: 16788

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6639078919574971944}
   - component: {fileID: 6890170901433983032}
   - component: {fileID: 5897875233474472565}
+  - component: {fileID: -3346973472920635423}
   m_Layer: 2
   m_Name: Piston
   m_TagString: Untagged
@@ -193,6 +194,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371ddad143a30e647bfed7513331f516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3346973472920635423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747443134150071571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d08f42b052bb4d99cc7aaf3923da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpspeed: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  speed: 0.2
+  fallMultiplier: 1.1
+  fJumpPressedRememberTime: 0.2
+  fGroundedRememberTime: 0.25
+  fCutJumpHeight: 0.5
+  healthPoints: 3
+  damagePoints: 1
+  knockbackStrength: 1
 --- !u!1 &7747443135386470697
 GameObject:
   m_ObjectHideFlags: 0

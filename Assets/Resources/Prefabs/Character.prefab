@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -153,6 +153,8 @@ MonoBehaviour:
   fJumpPressedRememberTime: 0.2
   fGroundedRememberTime: 0.25
   fCutJumpHeight: 0.5
+  healthPoints: 3
+  damagePoints: 1
 --- !u!114 &2577287424218647440
 MonoBehaviour:
   m_ObjectHideFlags: 0

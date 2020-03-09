@@ -28,6 +28,7 @@ public class Enemy : Character
     private float lookingForInputTimer;
     //таймер, считающий время, за которое враг должен успеть изменить элемент
     private float attentionTimerInput;
+    
     //скорость движения в спокойном состоянии
     [SerializeField]
     private float speedIdle = 0.05f;
@@ -208,6 +209,10 @@ public class Enemy : Character
     // Update is called once per frame
     protected override void Update()
     {
+        if (healthPoints <= 0)
+        {
+            NpcDeath();
+        }
     }
 
     protected override void FixedUpdate()
@@ -237,5 +242,11 @@ public class Enemy : Character
         }
             
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        var collider = other.collider;
+        DamageDealing(collider);
     }
 }

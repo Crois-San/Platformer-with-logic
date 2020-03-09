@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7959621625507402512}
   - component: {fileID: 7959621625507402519}
   - component: {fileID: 7959621625507402514}
+  - component: {fileID: 5800289048603777424}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -51,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,4 +135,28 @@ MonoBehaviour:
   - {x: -0.7602439, y: 0.51174307, z: 0}
   m_ShapePathHash: 377370033
   m_Mesh: {fileID: 0}
-  m_InstanceId: 23986
+  m_InstanceId: 16070
+--- !u!114 &5800289048603777424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7959621625507402518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d08f42b052bb4d99cc7aaf3923da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpspeed: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 768
+  speed: 0.2
+  fallMultiplier: 1.1
+  fJumpPressedRememberTime: 0.2
+  fGroundedRememberTime: 0.25
+  fCutJumpHeight: 0.5
+  healthPoints: 3
+  damagePoints: 1
+  knockbackStrength: 1
