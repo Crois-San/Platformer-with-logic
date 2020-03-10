@@ -148,15 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7d08f42b052bb4d99cc7aaf3923da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpspeed: 0
-  mask:
+  targetMask:
     serializedVersion: 2
     m_Bits: 768
-  speed: 0.2
-  fallMultiplier: 1.1
-  fJumpPressedRememberTime: 0.2
-  fGroundedRememberTime: 0.25
-  fCutJumpHeight: 0.5
-  healthPoints: 3
-  damagePoints: 1
-  knockbackStrength: 1

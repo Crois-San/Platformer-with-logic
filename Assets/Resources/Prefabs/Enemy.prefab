@@ -154,7 +154,6 @@ MonoBehaviour:
   fGroundedRememberTime: 0.25
   fCutJumpHeight: 0.5
   healthPoints: 2
-  damagePoints: 1
   speedIdle: 0.05
   speedChasing: 0.15
   targetPlayerMask:
@@ -163,6 +162,9 @@ MonoBehaviour:
   targetInputMask:
     serializedVersion: 2
     m_Bits: 1024
+  damagePoints: 1
+  damageDelay: 3
+  knockbackStrength: 1
 --- !u!114 &972089558033896034
 MonoBehaviour:
   m_ObjectHideFlags: 0

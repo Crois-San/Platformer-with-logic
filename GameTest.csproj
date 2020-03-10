@@ -60,7 +60,9 @@
   <ItemGroup>
      <Compile Include="Assets\Resources\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Resources\Scripts\Character.cs" />
+     <Compile Include="Assets\Resources\Scripts\DamageSystem.cs" />
      <Compile Include="Assets\Resources\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Resources\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Resources\Scripts\LightSwitch.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalAnd.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalElement.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Enemy : Character
@@ -20,6 +21,8 @@ public class Enemy : Character
     private Collider2D[] collidersNextToEntity, collidersAboveEntity, collidersUnderEntity, collidersUnderPlatform;
     //коллайдер, для поиска ввода 
     private Collider2D input;
+
+    private Collider2D otherCollider;
     //основной таймер
     private float timer;
     //таймер, по истечению которого враг перестает преследовать игрока
@@ -28,6 +31,9 @@ public class Enemy : Character
     private float lookingForInputTimer;
     //таймер, считающий время, за которое враг должен успеть изменить элемент
     private float attentionTimerInput;
+    private int CollisionCount;
+    private IDamageDealer dd;
+    private IHealthSystem hs;
     
     //скорость движения в спокойном состоянии
     [SerializeField]
@@ -45,10 +51,24 @@ public class Enemy : Character
     //объекты игрока и ввода соответственно
     private GameObject targetPlayer, targetInput;
 
+    [SerializeField] 
+    private int damagePoints = 1;
+    [SerializeField] 
+    private float damageDelay = 3f;
+
+    [SerializeField] 
+    private float knockbackStrength = 1f;
+
     //геттеры
     public GameObject getTargetPlayer => targetPlayer;
     public GameObject getTargetInput => targetInput;
     public Collider2D[] getCollidersNextToEntity => collidersNextToEntity;
+    public int getCollisionCount => CollisionCount;
+    public int getDamagePoints => damagePoints;
+    public int setDamagePoints
+    {
+        set => damagePoints = value;
+    }
 
 
     protected override void Moving(float move)
@@ -204,15 +224,18 @@ public class Enemy : Character
         moving = 1;
         speed = 0.05f;
         grounded = false;
+        dd = new DamageSystem(damagePoints,knockbackStrength,damageDelay);
+        hs = new HealthSystem(healthPoints,gameObject);
     }
 
     // Update is called once per frame
     protected override void Update()
     {
-        if (healthPoints <= 0)
+        if (CollisionCount > 0)
         {
-            NpcDeath();
+            dd.DamageDealing(otherCollider);
         }
+        hs.NpcDeath();
     }
 
     protected override void FixedUpdate()
@@ -246,7 +269,13 @@ public class Enemy : Character
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        var collider = other.collider;
-        DamageDealing(collider);
+        CollisionCount ++;
+        otherCollider = other.collider;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        CollisionCount --;
+        otherCollider = null;
     }
 }

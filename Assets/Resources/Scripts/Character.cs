@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class Character : MonoBehaviour
 {
     //скорость/высота прыжка персонажа
@@ -10,7 +11,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected LayerMask mask;
 
     //направление персонажа
-    protected float moving;
+    protected float moving { get; set; }
 
     //скорость движения персонажа
     [SerializeField] [Range(0f, 1f)]
@@ -38,11 +39,7 @@ public class Character : MonoBehaviour
     [SerializeField] 
     protected int healthPoints = 3;
     
-    [SerializeField] 
-    protected int damagePoints = 1;
-
-    [SerializeField] 
-    protected float knockbackStrength = 1f;
+    
 
     //Положительное значение этой переменной активирует прыжок
     protected bool jumpRequest;
@@ -56,20 +53,18 @@ public class Character : MonoBehaviour
     protected Rigidbody2D body;
 
     protected SpriteRenderer sr;
+    private IHealthSystem hs;
 
     //геттеры/сеттеры
     public bool getJumpRequest => jumpRequest;
     public bool getGrounded => grounded;
     public int getHealthPoints => healthPoints;
+    public float getMoving => moving;
+
 
     public int setHealthPoints
     {
         set => healthPoints = value;
-    }
-    public int getDamagePoints => damagePoints;
-    public int setDamagePoints
-    {
-        set => damagePoints = value;
     }
 
     /*
@@ -152,27 +147,6 @@ public class Character : MonoBehaviour
         }
     }
 
-    //действия, происходящие при значении очков здоровья <= 0
-    //TODO: анимация смерти, возможно шейдерами; частицы. 
-    protected void NpcDeath()
-    {
-        Destroy(gameObject);
-    }
-    
-    //действия, происходящие при нанесении урона
-    protected virtual void DamageDealing(Collider2D collider)
-    {
-        if(!collider) return;
-        var victimGameObject = collider.gameObject;
-        var victimCharacter = victimGameObject.GetComponent<Character>();
-        if(!victimCharacter) return;
-        victimCharacter.setHealthPoints = victimCharacter.getHealthPoints - damagePoints;
-        if(!victimGameObject.GetComponent<Rigidbody2D>()) return;
-        var knockbackVector = new Vector2(victimCharacter.moving*-1,1);
-        victimGameObject.GetComponent<Rigidbody2D>().AddForce(knockbackVector*knockbackStrength,ForceMode2D.Impulse);
-        Debug.Log(victimCharacter.getHealthPoints);
-    }
-
     //вызывается в начале программы
     protected virtual void Awake()
     {
@@ -185,6 +159,7 @@ public class Character : MonoBehaviour
          * groundedSkin - высота области.
          */
         boxSize = new Vector2(characterSize.x, groundedSkin);
+        hs = new HealthSystem(healthPoints,gameObject);
     }
 
     //вызывается каждый фрейм
@@ -204,10 +179,7 @@ public class Character : MonoBehaviour
         {
             jumpRequest = true;
         }
-        if (healthPoints <= 0)
-        {
-            NpcDeath();
-        }
+        hs.NpcDeath();
     }
 
     //Эта функция как Update(), но нужна для вычисления физики

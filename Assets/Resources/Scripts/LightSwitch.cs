@@ -6,27 +6,19 @@ public class LightSwitch : MonoBehaviour
 {
     //свечение логического элемента
     private LogicalElement element;
-    private GameObject[] light;
+    //private GameObject[] light;
     private GameObject child;
+    private List<GameObject> light;
     void Start()
     {
         //находим свечение логического элемента
-        //light = GameObject.FindGameObjectsWithTag("Light");
-        int n = 0, j=0;
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            child = transform.GetChild(i).gameObject;
-            if (child.CompareTag("Light"))
-                n++;
-        }
-        light = new GameObject[n];
+        light = new List<GameObject>();
         for (int i = 0; i < transform.childCount; i++)
         {
             child = transform.GetChild(i).gameObject;
             if (child.CompareTag("Light"))
             {
-                light[j] = child;
-                j++;
+                light.Add(child);
             }
         }
         element = GetComponent<LogicalElement>();
