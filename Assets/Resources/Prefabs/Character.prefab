@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 53ac61a51759ff74e8f9d713c020af81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,7 +154,6 @@ MonoBehaviour:
   fGroundedRememberTime: 0.25
   fCutJumpHeight: 0.5
   healthPoints: 3
-  damagePoints: 1
 --- !u!114 &2577287424218647440
 MonoBehaviour:
   m_ObjectHideFlags: 0

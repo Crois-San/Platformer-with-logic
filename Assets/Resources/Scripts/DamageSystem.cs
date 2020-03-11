@@ -11,14 +11,17 @@ interface IDamageDealer
 //система нанесения урона, применяемая по умолчанию
 public class DamageSystem : IDamageDealer
 {
-    private int DamagePoints { get; set; }
-    private float KnockbackStrength { get; set; }
-    private float DamageDelay { get; set; }
+    public int DamagePoints { get; set; }
+    public float KnockbackStrength { get; set; }
+    public float DamageDelay { get; set; }
+    public int CollisionCount { get; set; }
+    public GameObject DamagingObject { get; set; } 
     private float lastDamage = -10f;
 
 
-    public DamageSystem(int damagePoints, float knockbackStrength,float damageDelay)
+    public DamageSystem(GameObject damagingObject,int damagePoints, float knockbackStrength,float damageDelay)
     {
+        DamagingObject = damagingObject;
         DamagePoints = damagePoints;
         KnockbackStrength = knockbackStrength;
         DamageDelay = damageDelay;
@@ -28,14 +31,15 @@ public class DamageSystem : IDamageDealer
     public void DamageDealing(Collider2D collider)
     {
         if(!collider) return;
+        CollisionCount = DamagingObject.GetComponent<Enemy>().CollisionCount;
         var victimGameObject = collider.gameObject;
         var victimCharacter = victimGameObject.GetComponent<Character>();
         if(!victimCharacter) return;
-        if(Time.time < DamageDelay+lastDamage) return;
+        if((Time.time < DamageDelay+lastDamage) || CollisionCount <= 1) return;
         victimCharacter.setHealthPoints = victimCharacter.getHealthPoints - DamagePoints;
         if(!victimGameObject.GetComponent<Rigidbody2D>()) return;
         var knockbackVector = new Vector2(victimCharacter.getMoving*-1,1);
-        victimGameObject.GetComponent<Rigidbody2D>().AddForce(knockbackVector*KnockbackStrength,ForceMode2D.Impulse);
+        //victimGameObject.GetComponent<Rigidbody2D>().AddForce(knockbackVector*KnockbackStrength,ForceMode2D.Impulse);
         lastDamage = Time.time;
         Debug.Log(victimCharacter.getHealthPoints);
     }

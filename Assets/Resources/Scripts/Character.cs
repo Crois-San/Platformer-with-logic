@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
 
     //направление персонажа
     protected float moving { get; set; }
+    public float fade { get; set; } = 1.3f;
 
     //скорость движения персонажа
     [SerializeField] [Range(0f, 1f)]
@@ -159,7 +160,7 @@ public class Character : MonoBehaviour
          * groundedSkin - высота области.
          */
         boxSize = new Vector2(characterSize.x, groundedSkin);
-        hs = new HealthSystem(healthPoints,gameObject);
+        hs = new HealthSystemWithShader(healthPoints,gameObject,fade);
     }
 
     //вызывается каждый фрейм

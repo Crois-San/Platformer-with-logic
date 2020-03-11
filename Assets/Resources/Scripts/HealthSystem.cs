@@ -10,8 +10,8 @@ interface IHealthSystem
 
 public class HealthSystem :  IHealthSystem
 {
-    private int HealthPoints { get; set; }
-    private GameObject HealthyObject { get; set; } 
+    public int HealthPoints { get; set; }
+    public GameObject HealthyObject { get; set; }
 
     public HealthSystem(int healthPoints, GameObject healthyObject)
     {
@@ -32,6 +32,42 @@ public class HealthSystem :  IHealthSystem
         if (HealthPoints <= 0)
         {
             GameObject.Destroy(HealthyObject);
+        }
+    }
+}
+public class HealthSystemWithShader :  IHealthSystem
+{
+    public int HealthPoints { get; set; }
+    public GameObject HealthyObject { get; set; }
+    public float Fade { get; set; }
+    private Material shaderMaterial;
+
+    public HealthSystemWithShader(int healthPoints, GameObject healthyObject, float fade)
+    {
+        HealthPoints = healthPoints;
+        HealthyObject = healthyObject;
+        shaderMaterial = healthyObject.GetComponent<SpriteRenderer>().material;
+        Fade = fade;
+    }
+
+
+    public void NpcDeath()
+    {
+        HealthPoints = HealthyObject.GetComponent<Character>().getHealthPoints;
+        //действия, происходящие при значении очков здоровья <= 0
+        //TODO: анимация смерти, возможно шейдерами; частицы. 
+        if (HealthPoints <= 0)
+        {
+            if (Fade > 0)
+            {
+                Fade -= Time.deltaTime;
+                shaderMaterial.SetFloat("_Fade",Fade);
+            }
+            else
+            {
+                GameObject.Destroy(HealthyObject);
+                Fade = 0;
+            }
         }
     }
 }

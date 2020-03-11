@@ -73,6 +73,7 @@
      <Compile Include="Assets\Resources\Scripts\LogicalPiston.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalWire.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalXor.cs" />
+     <Compile Include="Assets\Resources\Scripts\SoundSystem.cs" />
      <Compile Include="Assets\Resources\Scripts\TileCrush.cs" />
      <Compile Include="Assets\Resources\Scripts\wireAwakening.cs" />
      <None Include="Assets\Resources\Scripts\GameTest.asmdef" />

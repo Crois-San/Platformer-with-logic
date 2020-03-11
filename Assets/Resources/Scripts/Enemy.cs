@@ -31,7 +31,7 @@ public class Enemy : Character
     private float lookingForInputTimer;
     //таймер, считающий время, за которое враг должен успеть изменить элемент
     private float attentionTimerInput;
-    private int CollisionCount;
+    public int CollisionCount { get; set; }
     private IDamageDealer dd;
     private IHealthSystem hs;
     
@@ -63,7 +63,6 @@ public class Enemy : Character
     public GameObject getTargetPlayer => targetPlayer;
     public GameObject getTargetInput => targetInput;
     public Collider2D[] getCollidersNextToEntity => collidersNextToEntity;
-    public int getCollisionCount => CollisionCount;
     public int getDamagePoints => damagePoints;
     public int setDamagePoints
     {
@@ -224,17 +223,17 @@ public class Enemy : Character
         moving = 1;
         speed = 0.05f;
         grounded = false;
-        dd = new DamageSystem(damagePoints,knockbackStrength,damageDelay);
+        dd = new DamageSystem(gameObject,damagePoints,knockbackStrength,damageDelay);
         hs = new HealthSystem(healthPoints,gameObject);
     }
 
     // Update is called once per frame
     protected override void Update()
     {
-        if (CollisionCount > 0)
-        {
+        //if (CollisionCount > 1)
+        //{
             dd.DamageDealing(otherCollider);
-        }
+        //}
         hs.NpcDeath();
     }
 
@@ -273,7 +272,7 @@ public class Enemy : Character
         otherCollider = other.collider;
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnCollisionExit2D(Collision2D other)
     {
         CollisionCount --;
         otherCollider = null;
