@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3762015539398626426}
   - component: {fileID: 3762015539398626427}
   - component: {fileID: 5377171156353872482}
+  - component: {fileID: 3776866992243886151}
   m_Layer: 11
   m_Name: Logical Wire
   m_TagString: Wire
@@ -126,7 +127,19 @@ MonoBehaviour:
   - {x: -1.3333333, y: 0.36403823, z: 0}
   m_ShapePathHash: 771204523
   m_Mesh: {fileID: 0}
-  m_InstanceId: 24416
+  m_InstanceId: 21562
+--- !u!114 &3776866992243886151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762015539398626428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371ddad143a30e647bfed7513331f516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8545349353651308645
 GameObject:
   m_ObjectHideFlags: 0

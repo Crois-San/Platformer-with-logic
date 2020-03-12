@@ -32,8 +32,10 @@ public class Enemy : Character
     //таймер, считающий время, за которое враг должен успеть изменить элемент
     private float attentionTimerInput;
     public int CollisionCount { get; set; }
+    //интерфейсы
     private IDamageDealer dd;
     private IHealthSystem hs;
+    private ISoundSystem ss;
     
     //скорость движения в спокойном состоянии
     [SerializeField]
@@ -219,21 +221,28 @@ public class Enemy : Character
     // Start is called before the first frame update
     protected override void Awake()
     {
-        base.Awake();
+        body = GetComponent<Rigidbody2D>();
+        characterSize = GetComponent<BoxCollider2D>().size;
+        sr = GetComponent<SpriteRenderer>();
+        body.gravityScale = 1f;
+        /*
+         * Размер области для определения соприкосновения с землей,
+         * groundedSkin - высота области.
+         */
+        boxSize = new Vector2(characterSize.x, groundedSkin);
         moving = 1;
         speed = 0.05f;
         grounded = false;
         dd = new DamageSystem(gameObject,damagePoints,knockbackStrength,damageDelay);
         hs = new HealthSystem(healthPoints,gameObject);
+        ss = new SoundSystemWalking(gameObject);
     }
 
     // Update is called once per frame
     protected override void Update()
     {
-        //if (CollisionCount > 1)
-        //{
-            dd.DamageDealing(otherCollider);
-        //}
+        ss.MakeSound();
+        dd.DamageDealing(otherCollider);
         hs.NpcDeath();
     }
 

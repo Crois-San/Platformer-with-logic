@@ -15,8 +15,8 @@ public class Character : MonoBehaviour
     public float fade { get; set; } = 1.3f;
 
     //скорость движения персонажа
-    [SerializeField] [Range(0f, 1f)]
-    protected float speed = 0.2f;
+    [SerializeField] 
+    public float speed { get; protected set; } = 0.3f;
 
     //модификатор гравитации
     [SerializeField][Range(1,3)]
@@ -54,7 +54,9 @@ public class Character : MonoBehaviour
     protected Rigidbody2D body;
 
     protected SpriteRenderer sr;
+    //интерфейсы
     private IHealthSystem hs;
+    private ISoundSystem ss;
 
     //геттеры/сеттеры
     public bool getJumpRequest => jumpRequest;
@@ -93,8 +95,7 @@ public class Character : MonoBehaviour
             {
                 fJumpPressedRemember = 0;
                 fGroundedRemember = 0;
-                //body.velocity = new Vector2(body.velocity.x, jumpspeed);
-                body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
+                body.AddForce(jumpspeed * Vector2.up, ForceMode2D.Impulse);
                 jumpRequest = false;
                 grounded = false;
             }
@@ -161,11 +162,14 @@ public class Character : MonoBehaviour
          */
         boxSize = new Vector2(characterSize.x, groundedSkin);
         hs = new HealthSystemWithShader(healthPoints,gameObject,fade);
+        ss = new SoundSystemWalking(gameObject);
     }
 
     //вызывается каждый фрейм
     protected virtual void Update()
     {
+        //звуки ходьбы персонажа
+        ss.MakeSound();
         /*
          * Возвращает 1 или -1 в зависимости от направления движения.
          * Нажатие A или D на клавиатуре определяет направление движения
