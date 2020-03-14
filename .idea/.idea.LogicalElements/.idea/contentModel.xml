@@ -7,6 +7,8 @@
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="Scripts" t="Include">
+            <e p="AmbientPlayer.cs" t="Include" />
+            <e p="AudioFadeOut.cs" t="Include" />
             <e p="CameraMovement.cs" t="Include" />
             <e p="Character.cs" t="Include" />
             <e p="DamageSystem.cs" t="Include" />
@@ -17,12 +19,14 @@
             <e p="LogicalAnd.cs" t="Include" />
             <e p="LogicalElement.cs" t="Include" />
             <e p="LogicalInput.cs" t="Include" />
+            <e p="LogicalMechanism.cs" t="Include" />
             <e p="LogicalNot.cs" t="Include" />
             <e p="LogicalOr.cs" t="Include" />
             <e p="LogicalOutput.cs" t="Include" />
             <e p="LogicalPiston.cs" t="Include" />
             <e p="LogicalWire.cs" t="Include" />
             <e p="LogicalXor.cs" t="Include" />
+            <e p="Sounds.cs" t="Include" />
             <e p="SoundSystem.cs" t="Include" />
             <e p="TileCrush.cs" t="Include" />
             <e p="wireAwakening.cs" t="Include" />

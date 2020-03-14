@@ -10,9 +10,9 @@ public class LogicalOutput : LogicalElement
 		state = A.state;
 	}
 
-	private void Update()
+	protected override void Update()
 	{
 		Logical_output(le1);
-		SpriteChange();
+		base.Update();
 	}
 }

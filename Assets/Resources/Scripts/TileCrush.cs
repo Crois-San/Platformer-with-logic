@@ -21,8 +21,8 @@ public class TileCrush : MonoBehaviour
         if (Physics2D.OverlapBox(boxCenter, boxSize, 0f, targetMask))
         {
             Debug.Log("yes");
-            var collider = other.collider; 
-            dd.DamageDealing(collider);
+            var collision = other; 
+            dd.DamageDealing(collision);
         }
     }
 }

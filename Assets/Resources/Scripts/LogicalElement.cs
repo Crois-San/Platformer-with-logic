@@ -28,15 +28,27 @@ public abstract class LogicalElement : MonoBehaviour
 	//Рендерер спрайтов, нужен для переключения спрайтов состояний элемента
 	protected SpriteRenderer sr;
 
+	protected ISoundSystem ss;
+
 	public bool GetState()
 	{
 		return state;
 	}
 
+	protected virtual void Start()
+	{
+		sr = GetComponent<SpriteRenderer>();
+		ss = new SoundSystemDefaultLooping(gameObject,Sounds.LogicalElementBuzz, 0.048f);
+	}
+	protected virtual void Update()
+	{
+		SpriteChange();
+		ElementSound();
+	}
+
 	//Эта функция изменяет спрайт в зависимости от состояния элемента
 	protected void SpriteChange()
 	{
-		sr = GetComponent<SpriteRenderer>();
 		if (state)
 		{
 			sr.sprite = on;
@@ -44,6 +56,18 @@ public abstract class LogicalElement : MonoBehaviour
 		else
 		{
 			sr.sprite = off;
+		}
+	}
+	
+	protected void ElementSound()
+	{
+		if (state)
+		{
+			ss.MakeSound();
+		}
+		else
+		{
+			ss.StopSound();
 		}
 	}
 	

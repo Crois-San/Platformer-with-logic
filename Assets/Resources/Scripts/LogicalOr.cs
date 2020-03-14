@@ -12,9 +12,9 @@ public class LogicalOr : LogicalElement
 	}
 	
 
-	private void Update()
+	protected override void Update()
 	{
 		Logical_or(le1, le2);
-		SpriteChange();
+		base.Update();
 	}
 }

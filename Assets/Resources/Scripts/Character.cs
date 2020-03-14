@@ -18,6 +18,8 @@ public class Character : MonoBehaviour
     [SerializeField] 
     public float speed { get; protected set; } = 0.3f;
 
+    protected const int SpeedMultiplier = 50;
+
     //модификатор гравитации
     [SerializeField][Range(1,3)]
     protected float fallMultiplier = 1.1f;
@@ -56,7 +58,7 @@ public class Character : MonoBehaviour
     protected SpriteRenderer sr;
     //интерфейсы
     private IHealthSystem hs;
-    private ISoundSystem ss;
+    private ISoundSystem ssMovement, ssJump;
 
     //геттеры/сеттеры
     public bool getJumpRequest => jumpRequest;
@@ -76,7 +78,7 @@ public class Character : MonoBehaviour
     protected virtual void Moving(float move)
     {
         //Строка ниже перемещает персонажа в направлении move и со скоростью speed
-        body.transform.Translate(move * speed, 0f, 0f, Space.Self);
+        body.transform.Translate(move * speed * Time.deltaTime*SpeedMultiplier, 0f, 0f, Space.Self);
         //инвертирует спрайт в зависимости от направления движения
         sr.flipX = move < 0.0f;
     }
@@ -95,7 +97,8 @@ public class Character : MonoBehaviour
             {
                 fJumpPressedRemember = 0;
                 fGroundedRemember = 0;
-                body.AddForce(jumpspeed * Vector2.up, ForceMode2D.Impulse);
+                body.AddForce(SpeedMultiplier*jumpspeed * Time.deltaTime *Vector2.up, ForceMode2D.Impulse);
+                ssJump.MakeSound();
                 jumpRequest = false;
                 grounded = false;
             }
@@ -162,14 +165,15 @@ public class Character : MonoBehaviour
          */
         boxSize = new Vector2(characterSize.x, groundedSkin);
         hs = new HealthSystemWithShader(healthPoints,gameObject,fade);
-        ss = new SoundSystemWalking(gameObject);
+        ssMovement = new SoundSystemWalking(gameObject);
+        ssJump = new SoundSystemDefault(gameObject,Sounds.JumpSound, 0.3f);
     }
 
     //вызывается каждый фрейм
     protected virtual void Update()
     {
         //звуки ходьбы персонажа
-        ss.MakeSound();
+        ssMovement.MakeSound();
         /*
          * Возвращает 1 или -1 в зависимости от направления движения.
          * Нажатие A или D на клавиатуре определяет направление движения

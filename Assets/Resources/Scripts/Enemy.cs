@@ -22,7 +22,7 @@ public class Enemy : Character
     //коллайдер, для поиска ввода 
     private Collider2D input;
 
-    private Collider2D otherCollider;
+    private Collision2D otherCollision;
     //основной таймер
     private float timer;
     //таймер, по истечению которого враг перестает преследовать игрока
@@ -124,7 +124,7 @@ public class Enemy : Character
     {
         if (grounded && jumpRequest)
         {
-            body.AddForce(Vector2.up * jumpspeed, ForceMode2D.Impulse);
+            body.AddForce(SpeedMultiplier * Time.deltaTime * jumpspeed*Vector2.up, ForceMode2D.Impulse);
             jumpRequest = false;
             grounded = false;
         }
@@ -242,7 +242,7 @@ public class Enemy : Character
     protected override void Update()
     {
         ss.MakeSound();
-        dd.DamageDealing(otherCollider);
+        dd.DamageDealing(otherCollision);
         hs.NpcDeath();
     }
 
@@ -278,12 +278,12 @@ public class Enemy : Character
     private void OnCollisionEnter2D(Collision2D other)
     {
         CollisionCount ++;
-        otherCollider = other.collider;
+        otherCollision = other;
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
         CollisionCount --;
-        otherCollider = null;
+        otherCollision = null;
     }
 }

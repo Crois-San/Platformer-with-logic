@@ -12,9 +12,9 @@ public class LogicalNot : LogicalElement
 	}
 	
 
-	private void Update()
+	protected  override void Update()
 	{
 		Logical_not(le1);
-		SpriteChange();
+		base.Update();
 	}
 }

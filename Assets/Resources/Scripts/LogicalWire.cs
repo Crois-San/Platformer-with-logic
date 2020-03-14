@@ -87,11 +87,10 @@ public class LogicalWire : LogicalElement
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         wirePositionArrangement();
         state=le1.state;
-        SpriteChange();
-
+        base.Update();
     }
 }

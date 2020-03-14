@@ -11,9 +11,9 @@ public class LogicalXor : LogicalElement
 		state = (A.state || B.state) && (!A.state || !B.state);
 	}
 	
-	private void Update()
+	protected  override void Update()
 	{
 		Logical_xor(le1, le2);
-		SpriteChange();
+		base.Update();
 	}
 }

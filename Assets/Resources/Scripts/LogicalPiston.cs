@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogicalPiston : LogicalElement
+public class LogicalPiston : LogicalMechanism
 {
     /*
      * Поршень - на данный момент самый сложный логический элемент.
@@ -19,6 +19,8 @@ public class LogicalPiston : LogicalElement
     private Vector2 rayStart;
     //переменная положительна, когда найден объект для отталкивания
     private bool isConnected;
+
+    public bool isNotPlaying { get; set; } = true;
     //маска, нужна для поиска объекта, чтобы он не нашел сам себя
     [SerializeField]
     private LayerMask m;
@@ -31,6 +33,7 @@ public class LogicalPiston : LogicalElement
     //позиция рукояти поршня
     private Transform pistonHead;
     private Vector2 pistonHeadSize, pistonHeadScale;
+    private ISoundSystem ssPiston;
     
     
     
@@ -55,25 +58,48 @@ public class LogicalPiston : LogicalElement
             
             if (state)
             {
+                if (isNotPlaying)
+                {
+                    ssPiston.MakeSound();
+                    isNotPlaying = false;
+                }
                 //отталкивание объекта
                 startPos = pulledObject.transform.position.y;
                 endPos = pulledObjPos.y-pushDistance;
                 pistonHeadStartPos = pistonHead.position.y;
                 pistonHeadEndPos = pistonHeadPos.y - pushDistance;
+                
                 //Math.lerp нужен для плавного перемещения объекта из точки А в точку Б
                 pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
                 pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
-                
+                if (Math.Abs(pulledObject.transform.position.y - endPos) < 0.01f)
+                {
+                    ssPiston.StopSound();
+                    isNotPlaying = true;
+                }
+
             }
             else
             {
+                if (isNotPlaying)
+                {
+                    ssPiston.MakeSound();
+                    isNotPlaying = false;
+                }
                 //притягивание объекта
                 startPos = pulledObject.transform.position.y;
                 endPos = pulledObjPos.y;
                 pistonHeadStartPos = pistonHead.position.y;
                 pistonHeadEndPos = pistonHeadPos.y;
+
                 pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
                 pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
+                if (Math.Abs(pulledObject.transform.position.y - endPos) < 0.01f)
+                {
+                    ssPiston.StopSound();
+                    isNotPlaying = true;
+                }
+
             }
         }
     }
@@ -88,6 +114,7 @@ public class LogicalPiston : LogicalElement
         pistonHeadSize = pistonHead.gameObject.GetComponent<SpriteRenderer>().size;
         pistonHeadScale = pistonHead.localScale;
         pistonHeadPos = pistonHead.position;
+        ssPiston = new SoundSystemDefaultLooping(gameObject,Sounds.PistonMovement, 0.6f);
         /*
          * Собственно поиск объекта.
          * При коллизии с объектом, связывает его с поршнем.

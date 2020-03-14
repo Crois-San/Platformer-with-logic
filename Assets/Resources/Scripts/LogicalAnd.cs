@@ -12,9 +12,9 @@ public class LogicalAnd : LogicalElement
 	}
 	
 
-	private void Update()
+	protected override void Update()
 	{
 		Logical_and(le1, le2);
-		SpriteChange();
+		base.Update();
 	}
 }

@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Resources\Scripts\AmbientPlayer.cs" />
+     <Compile Include="Assets\Resources\Scripts\AudioFadeOut.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Resources\Scripts\Character.cs" />
      <Compile Include="Assets\Resources\Scripts\DamageSystem.cs" />
@@ -67,6 +69,7 @@
      <Compile Include="Assets\Resources\Scripts\LogicalAnd.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalElement.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalInput.cs" />
+     <Compile Include="Assets\Resources\Scripts\LogicalMechanism.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalNot.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalOr.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalOutput.cs" />
@@ -74,6 +77,7 @@
      <Compile Include="Assets\Resources\Scripts\LogicalWire.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalXor.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundSystem.cs" />
+     <Compile Include="Assets\Resources\Scripts\Sounds.cs" />
      <Compile Include="Assets\Resources\Scripts\TileCrush.cs" />
      <Compile Include="Assets\Resources\Scripts\wireAwakening.cs" />
      <None Include="Assets\Resources\Scripts\GameTest.asmdef" />

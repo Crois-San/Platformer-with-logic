@@ -3,26 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //интерфейс управления звуком
-interface ISoundSystem
+public interface ISoundSystem
 {
     void MakeSound();
+    void StopSound();
+    void ChangeSound(Sounds sounds);
 }
-/*
- * Звуки ходьбы
- * Звуки при получении урона
- * Звуки при смерти персонажа
- * Звуки переключения входов
- * Звуки включенных элементов
- * Звук движения поршня
- * Звук эмбиента
- */
 public class SoundSystemDefault : ISoundSystem
  {
+     public GameObject SourceObject { get; set; }
+     public Character ObjectScript { get; set; }
+     public AudioSource SoundSource { get; set; } 
+     
+     public SoundSystemDefault(GameObject sourceObject, Sounds sounds, float volume)
+     {
+         SourceObject = sourceObject;
+         SoundSource = SourceObject.AddComponent<AudioSource>();
+         SoundSource.clip = sounds.Sound;
+         SoundSource.volume = volume;
+         
+     }
      public void MakeSound()
+     {
+         SoundSource.Play();
+     }
+     public void StopSound()
+     {
+         SoundSource.Stop();
+     }
+
+     public void ChangeSound(Sounds sounds)
      {
          throw new System.NotImplementedException();
      }
  }
+public class SoundSystemDefaultLooping : ISoundSystem
+{
+    public GameObject SourceObject { get; set; }
+    public Character ObjectScript { get; set; }
+    public AudioSource SoundSource { get; set; } 
+     
+    public SoundSystemDefaultLooping(GameObject sourceObject, Sounds sounds, float volume)
+    {
+        SourceObject = sourceObject;
+        SoundSource = SourceObject.AddComponent<AudioSource>();
+        SoundSource.clip = sounds.Sound;
+        SoundSource.volume = volume;
+        SoundSource.loop = true;
+
+    }
+    public void MakeSound()
+    {
+        SoundSource.Play();
+    }
+    public void StopSound()
+    {
+        SoundSource.Stop();
+    }
+
+    public void ChangeSound(Sounds sounds)
+    {
+        throw new System.NotImplementedException();
+    }
+    
+}
 
 public class SoundSystemWalking : ISoundSystem
 {
@@ -30,7 +74,8 @@ public class SoundSystemWalking : ISoundSystem
     public Character ObjectScript { get; set; }
     public AudioSource SoundSource { get; set; } 
     public float ObjectSpeed { get; set; }
-    public IEnumerator fadeSound { get; set; }
+    private bool isPlaying;
+    private ISoundSystem _soundSystemImplementation;
 
     public SoundSystemWalking(GameObject sourceObject)
     {
@@ -47,32 +92,53 @@ public class SoundSystemWalking : ISoundSystem
     {
         var SoundSpeed = 1+ObjectScript.speed;
         SoundSource.pitch = Mathf.Clamp(SoundSpeed,0.9f,1.5f) ;
-        if (Mathf.Abs(ObjectScript.getMoving) > 0 && ObjectScript.getGrounded)
+        isPlaying = Mathf.Abs(ObjectScript.getMoving) > 0 && ObjectScript.getGrounded;
+        if (isPlaying)
         {
             SoundSource.UnPause();
         }
         else
         {
             SoundSource.Pause();
-            //fadeSound = FadeOut(SoundSource, 0.5f);
-            //StartCoroutine (fadeSound);
-            //StopCoroutine (fadeSound);
-            
         }
     }
-
-    private static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    public void StopSound()
     {
-        float startVolume = audioSource.volume;
+        SoundSource.Stop();
+    }
 
-        while (audioSource.volume > 0)
-        {
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+    public void ChangeSound(Sounds sounds)
+    {
+        throw new System.NotImplementedException();
+    }
+}
+public class SoundSystemAmbient : ISoundSystem
+{
+    public GameObject SourceObject { get; set; }
+    public Character ObjectScript { get; set; }
+    public AudioSource SoundSource { get; set; } 
+     
+    public SoundSystemAmbient(GameObject sourceObject, float volume)
+    {
+        SourceObject = sourceObject;
+        SoundSource = SourceObject.AddComponent<AudioSource>();
+        SoundSource.volume = volume;
+         
+    }
+    public void MakeSound()
+    {
+        
+        //SoundSource.Play();
+        SoundSource.PlayOneShot(SoundSource.clip);
+    }
 
-            yield return null;
-        }
+    public void StopSound()
+    {
+        SoundSource.Stop();
+    }
 
-        audioSource.Pause();
-        audioSource.volume = startVolume;
+    public void ChangeSound(Sounds sounds)
+    {
+        SoundSource.clip = sounds.Sound;
     }
 }

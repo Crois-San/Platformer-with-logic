@@ -162,7 +162,7 @@ MonoBehaviour:
   - {x: -1, y: 0.9411765, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28864
+  m_InstanceId: 51256
 --- !u!95 &6890170901433983032
 Animator:
   serializedVersion: 3
@@ -206,18 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7d08f42b052bb4d99cc7aaf3923da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpspeed: 0
-  mask:
+  targetMask:
     serializedVersion: 2
     m_Bits: 0
-  speed: 0.2
-  fallMultiplier: 1.1
-  fJumpPressedRememberTime: 0.2
-  fGroundedRememberTime: 0.25
-  fCutJumpHeight: 0.5
-  healthPoints: 3
-  damagePoints: 1
-  knockbackStrength: 1
 --- !u!1 &7747443135386470697
 GameObject:
   m_ObjectHideFlags: 0

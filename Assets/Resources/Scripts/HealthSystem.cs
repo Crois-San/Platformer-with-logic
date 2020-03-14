@@ -41,6 +41,8 @@ public class HealthSystemWithShader :  IHealthSystem
     public GameObject HealthyObject { get; set; }
     public float Fade { get; set; }
     private Material shaderMaterial;
+    private ISoundSystem ssDeath;
+    private bool isNotPlaying = true;
 
     public HealthSystemWithShader(int healthPoints, GameObject healthyObject, float fade)
     {
@@ -48,6 +50,7 @@ public class HealthSystemWithShader :  IHealthSystem
         HealthyObject = healthyObject;
         shaderMaterial = healthyObject.GetComponent<SpriteRenderer>().material;
         Fade = fade;
+        ssDeath = new SoundSystemDefault(healthyObject,Sounds.DeathScore, 0.6f);
     }
 
 
@@ -58,13 +61,20 @@ public class HealthSystemWithShader :  IHealthSystem
         //TODO: анимация смерти, возможно шейдерами; частицы. 
         if (HealthPoints <= 0)
         {
+            if (isNotPlaying)
+            {
+                ssDeath.MakeSound();
+                isNotPlaying = false;
+            }
             if (Fade > 0)
             {
+                
                 Fade -= Time.deltaTime;
                 shaderMaterial.SetFloat("_Fade",Fade);
             }
             else
             {
+                
                 GameObject.Destroy(HealthyObject);
                 Fade = 0;
             }
