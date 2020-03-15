@@ -33,6 +33,15 @@ public abstract class LogicalElement : MonoBehaviour
 	public LogicalElement GetLE1 => le1;
 	public LogicalElement GetLE2 => le2;
 
+	public LogicalElement SetLE1
+	{
+		set => le1 = value;
+	}
+	public LogicalElement SetLE2
+	{
+		set => le1 = value;
+	}
+
 	public bool GetState()
 	{
 		return state;

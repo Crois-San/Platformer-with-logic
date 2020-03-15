@@ -58,18 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Resources\Scripts\Character.cs" />
-     <Compile Include="Assets\Resources\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalAnd.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalElement.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalInput.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalNot.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalOr.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalOutput.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalPiston.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalWire.cs" />
-     <Compile Include="Assets\Resources\Scripts\LogicalXor.cs" />
-     <Compile Include="Assets\Resources\Scripts\wireAwakening.cs" />
+     <Compile Include="Assets\LogoAnimationCycle.cs" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
  <HintPath>E:/Unity Projects/LogicalElements/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
@@ -312,9 +301,6 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="GameTest">
- <HintPath>E:/Unity Projects/LogicalElements/Library/ScriptAssemblies/GameTest.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -667,6 +653,12 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GameTest.csproj">
+      <Project>{086EAD92-E66F-B3FF-69D1-644001F6FE2E}</Project>
+      <Name>GameTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
