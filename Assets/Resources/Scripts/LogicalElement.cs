@@ -30,6 +30,9 @@ public abstract class LogicalElement : MonoBehaviour
 
 	protected ISoundSystem ss;
 
+	public LogicalElement GetLE1 => le1;
+	public LogicalElement GetLE2 => le2;
+
 	public bool GetState()
 	{
 		return state;
