@@ -83,6 +83,7 @@ public class LogicalWire : LogicalElement
     void Awake()
     {
         //берет координаты точки выхода в элементе выхода
+        if(le1 == null) return;
         inp = le1.gameObject.transform.Find("outPoint");
     }
 
