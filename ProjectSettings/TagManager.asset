@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wire
   - Light
+  - Settings panels
   layers:
   - Default
   - TransparentFX

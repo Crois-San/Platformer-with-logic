@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 //интерфейс управления звуком
 public interface ISoundSystem
@@ -21,7 +22,8 @@ public class SoundSystemDefault : ISoundSystem
          SoundSource = SourceObject.AddComponent<AudioSource>();
          SoundSource.clip = sounds.Sound;
          SoundSource.volume = volume;
-         
+         SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
+
      }
      public void MakeSound()
      {
@@ -50,6 +52,7 @@ public class SoundSystemDefaultLooping : ISoundSystem
         SoundSource.clip = sounds.Sound;
         SoundSource.volume = volume;
         SoundSource.loop = true;
+        SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
 
     }
     public void MakeSound()
@@ -75,7 +78,6 @@ public class SoundSystemWalking : ISoundSystem
     public AudioSource SoundSource { get; set; } 
     public float ObjectSpeed { get; set; }
     private bool isPlaying;
-    private ISoundSystem _soundSystemImplementation;
 
     public SoundSystemWalking(GameObject sourceObject)
     {
@@ -86,6 +88,7 @@ public class SoundSystemWalking : ISoundSystem
         SoundSource.clip = Resources.Load<AudioClip>("Sounds/Footstep");
         SoundSource.volume = 0.6f;
         SoundSource.loop = true;
+        SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
         SoundSource.Play();
     }
     public void MakeSound()
@@ -123,6 +126,7 @@ public class SoundSystemAmbient : ISoundSystem
         SourceObject = sourceObject;
         SoundSource = SourceObject.AddComponent<AudioSource>();
         SoundSource.volume = volume;
+        SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
          
     }
     public void MakeSound()

@@ -29,12 +29,22 @@
             <e p="Sounds.cs" t="Include" />
             <e p="SoundSystem.cs" t="Include" />
             <e p="TileCrush.cs" t="Include" />
+            <e p="UI Scripts" t="Include">
+              <e p="ButtonTextColorChange.cs" t="Include" />
+              <e p="CameraMenuTransition.cs" t="Include" />
+              <e p="DisableMenu.cs" t="Include" />
+              <e p="Exit.cs" t="Include" />
+              <e p="LevelSelect.cs" t="Include" />
+              <e p="SetVolume.cs" t="Include" />
+              <e p="ShowSettingPanel.cs" t="Include" />
+              <e p="VideoSettings.cs" t="Include" />
+            </e>
             <e p="wireAwakening.cs" t="Include" />
           </e>
         </e>
         <e p="Tests" t="Include">
-          <e p="EnemyTest.cs" t="Include" />
           <e p="ExampleTest.cs" t="Include" />
+          <e p="ItemsTests.cs" t="Include" />
           <e p="Tests.asmdef" t="Include" />
         </e>
       </e>
