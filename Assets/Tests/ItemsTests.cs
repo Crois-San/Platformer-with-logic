@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -17,47 +16,23 @@ public class ItemsTests
         LogicalPiston piston = pistonGameObject.GetComponent<LogicalPiston>();
         LogicalInput le1 = inputGameObject.GetComponent<LogicalInput>();
         
-        // Установка позиций
         tileGameObject.transform.position = new Vector2(piston.transform.position.x, piston.transform.position.y-2.5F);
         le1.transform.position = new Vector2(piston.transform.position.x-3.0F, piston.transform.position.y);
         le1.state = true;
         piston.SetLE1 = le1;
 
         yield return new WaitForSeconds(1.0f);
-        
+    
         // Проверка соединения
         Assert.IsTrue(piston.getConnected);
-        
+    
         // Проверка анимации
         Assert.IsFalse(piston.isNotPlaying);
     }
-    
-    [UnityTest]
-    public IEnumerator WireActionTest()
-    {
-        GameObject wireGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Logical Wire"));
-        GameObject logicalInputGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Logical Input"));
-        GameObject logicalAndGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Logical And"));
-        LogicalWire wire = wireGameObject.GetComponent<LogicalWire>();
-        LogicalInput input = logicalInputGameObject.GetComponent<LogicalInput>();
-        LogicalAnd and = logicalAndGameObject.GetComponent<LogicalAnd>();
-        
-        // Установка позиций
-        and.transform.position = new Vector2(input.transform.position.x+5.0F, input.transform.position.y);
-        // Привязка провода
-        wire.SetLE1 = input;
-        wire.SetLE2 = and;
-        
-        yield return new WaitForSeconds(2.0f);
-        
-        Assert.IsTrue(wire.state);
 
-
-        
-    }
 
     [UnityTest]
-    public IEnumerator Test()
+    public IEnumerator LogicalElementsTest()
     {
         // Работоспособность логических элементов
         GameObject logicalInputGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Logical Input"));
@@ -84,4 +59,7 @@ public class ItemsTests
         Object.Destroy(and);
     }
 }
+
+
+
 
