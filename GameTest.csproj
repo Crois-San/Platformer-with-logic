@@ -82,8 +82,10 @@
      <Compile Include="Assets\Resources\Scripts\UI Scripts\ButtonTextColorChange.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\CameraMenuTransition.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\DisableMenu.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI Scripts\DropdownItemsSetup.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\Exit.cs" />
-     <Compile Include="Assets\Resources\Scripts\UI Scripts\LevelSelect.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI Scripts\LevelSelector.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI Scripts\LevelUnlockSpriteChange.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\SetVolume.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\ShowSettingPanel.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\VideoSettings.cs" />
