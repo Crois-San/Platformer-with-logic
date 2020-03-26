@@ -25,13 +25,12 @@ public class LevelUnlockSpriteChange : MonoBehaviour
         if (isUnlocked)
         {
             img.sprite = unlocked;
-            levelNumber.color = new Color(0.6f,0.0235f,0.0235f); //99 06 06
+            levelNumber.color = new Color(0.9f,0.035f,0.035f); //E6 09 09
         }
         else
         {
             img.sprite = locked;
-            levelNumber.color = new Color(0.9f,0.035f,0.035f); //E6 09 09
-            
+            levelNumber.color = new Color(0.6f,0.0235f,0.0235f); //99 06 06
         }
     }
 }

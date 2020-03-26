@@ -132,11 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <isUnlocked>k__BackingField: 0
-  <unlocked>k__BackingField: {fileID: 21300000, guid: e4f96b33ed692a845bdf817d4fee5be6,
+  <unlocked>k__BackingField: {fileID: 21300000, guid: 138040a911e591c45ab0e0582fb2283a,
     type: 3}
-  <locked>k__BackingField: {fileID: 21300000, guid: 138040a911e591c45ab0e0582fb2283a,
+  <locked>k__BackingField: {fileID: 21300000, guid: e4f96b33ed692a845bdf817d4fee5be6,
     type: 3}
-  <parentPan>k__BackingField: {fileID: 0}
   <img>k__BackingField: {fileID: 4755984822975130528}
   <levelNumber>k__BackingField: {fileID: 4755984823195157785}
 --- !u!1 &4755984823195157799

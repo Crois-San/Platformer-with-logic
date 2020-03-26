@@ -37,6 +37,7 @@
               <e p="Exit.cs" t="Include" />
               <e p="LevelSelector.cs" t="Include" />
               <e p="LevelUnlockSpriteChange.cs" t="Include" />
+              <e p="SceneLoader.cs" t="Include" />
               <e p="SetVolume.cs" t="Include" />
               <e p="ShowSettingPanel.cs" t="Include" />
               <e p="VideoSettings.cs" t="Include" />
