@@ -26,6 +26,7 @@
             <e p="LogicalPiston.cs" t="Include" />
             <e p="LogicalWire.cs" t="Include" />
             <e p="LogicalXor.cs" t="Include" />
+            <e p="OnLevelCompleteAction.cs" t="Include" />
             <e p="Sounds.cs" t="Include" />
             <e p="SoundSystem.cs" t="Include" />
             <e p="TileCrush.cs" t="Include" />

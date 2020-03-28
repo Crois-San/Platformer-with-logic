@@ -76,6 +76,7 @@
      <Compile Include="Assets\Resources\Scripts\LogicalPiston.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalWire.cs" />
      <Compile Include="Assets\Resources\Scripts\LogicalXor.cs" />
+     <Compile Include="Assets\Resources\Scripts\OnLevelCompleteAction.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundSystem.cs" />
      <Compile Include="Assets\Resources\Scripts\Sounds.cs" />
      <Compile Include="Assets\Resources\Scripts\TileCrush.cs" />
