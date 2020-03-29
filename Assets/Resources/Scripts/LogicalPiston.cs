@@ -40,17 +40,36 @@ public class LogicalPiston : LogicalMechanism
     //позиция объекта
     private Vector2 pulledObjPos;
     //начальная и конечная точка объекта
-    private float startPos, endPos, pistonHeadStartPos, pistonHeadEndPos;
+    private Vector2 startPos, endPos, pistonHeadStartPos, pistonHeadEndPos;
     private Vector2 pistonHeadPos;
+    public Vector2 pistonDirection { get; set; }
+    public Vector3 pistonRotation { get; set; }
+
 
     //геттер
     public bool getConnected => isConnected;
+
+    public void PistonMovementCalculaton(Vector2 start, Vector2 end, Vector2 headStart, Vector2 headEnd)
+    {
+        //Math.lerp нужен для плавного перемещения объекта из точки А в точку Б
+        pulledObject.transform.position = Vector2.Lerp(start, end, Time.deltaTime * 2.0f);
+        pistonHead.position = Vector2.Lerp(headStart,headEnd,Time.deltaTime*2.0f);
+    }
+
+    public void PistonSoundStop(Vector2 end)
+    {
+        if (Math.Abs(((Vector2)pulledObject.transform.position - end).magnitude) < 0.01f)
+        {
+            ssPiston.StopSound();
+            isNotPlaying = true;
+        }
+    }
 
     //функция движения поршня
     void PistonAction(LogicalElement A)
     {
         state = A.state;
-        isConnected = Physics2D.Raycast(rayStart,Vector2.down,5f,m);
+        isConnected = Physics2D.Raycast(rayStart, pistonDirection,5f,m);
 
         //движение происходит только если объект связан с поршнем
         if (isConnected)
@@ -64,19 +83,13 @@ public class LogicalPiston : LogicalMechanism
                     isNotPlaying = false;
                 }
                 //отталкивание объекта
-                startPos = pulledObject.transform.position.y;
-                endPos = pulledObjPos.y-pushDistance;
-                pistonHeadStartPos = pistonHead.position.y;
-                pistonHeadEndPos = pistonHeadPos.y - pushDistance;
+                startPos = pulledObject.transform.position;
+                endPos = pulledObjPos + pistonDirection * pushDistance;
+                pistonHeadStartPos = pistonHead.position;
+                pistonHeadEndPos = pistonHeadPos + pistonDirection * pushDistance;
                 
-                //Math.lerp нужен для плавного перемещения объекта из точки А в точку Б
-                pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
-                pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
-                if (Math.Abs(pulledObject.transform.position.y - endPos) < 0.01f)
-                {
-                    ssPiston.StopSound();
-                    isNotPlaying = true;
-                }
+                PistonMovementCalculaton(startPos,endPos,pistonHeadStartPos,pistonHeadEndPos);
+                PistonSoundStop(endPos);
 
             }
             else
@@ -87,18 +100,13 @@ public class LogicalPiston : LogicalMechanism
                     isNotPlaying = false;
                 }
                 //притягивание объекта
-                startPos = pulledObject.transform.position.y;
-                endPos = pulledObjPos.y;
-                pistonHeadStartPos = pistonHead.position.y;
-                pistonHeadEndPos = pistonHeadPos.y;
+                startPos = pulledObject.transform.position;
+                endPos = pulledObjPos;
+                pistonHeadStartPos = pistonHead.position;
+                pistonHeadEndPos = pistonHeadPos;
 
-                pulledObject.transform.position = new Vector2(pulledObjPos.x,Mathf.Lerp(startPos,endPos,Time.deltaTime*2.0f));
-                pistonHead.position = new Vector2(pistonHeadPos.x,Mathf.Lerp(pistonHeadStartPos,pistonHeadEndPos,Time.deltaTime*2.0f));
-                if (Math.Abs(pulledObject.transform.position.y - endPos) < 0.01f)
-                {
-                    ssPiston.StopSound();
-                    isNotPlaying = true;
-                }
+                PistonMovementCalculaton(startPos,endPos,pistonHeadStartPos,pistonHeadEndPos);
+                PistonSoundStop(endPos);
 
             }
         }
@@ -107,7 +115,10 @@ public class LogicalPiston : LogicalMechanism
     private void Start()
     {
         //определение точки, из которой начинается поиск объекта 
-        rayStart = this.gameObject.transform.position;
+        rayStart = gameObject.transform.position;
+        pistonRotation = gameObject.transform.rotation.eulerAngles;
+        pistonDirection = Quaternion.Euler(pistonRotation) * Vector2.down;
+        //pushDistance = GetComponent<Collider2D>().bounds.size.y;
         pistonAnim = GetComponent<Animator>();
         pistonLightAnim = transform.Find("LightSource").gameObject.GetComponent<Animator>();
         pistonHead = transform.Find("pistonHead");
@@ -120,11 +131,11 @@ public class LogicalPiston : LogicalMechanism
          * При коллизии с объектом, связывает его с поршнем.
          * Также возврщает true в isConnected.
          */
-        isConnected = Physics2D.Raycast(rayStart,Vector2.down,5f,m);
+        isConnected = Physics2D.Raycast(rayStart,pistonDirection,5f,m);
         if (isConnected)
         {
             //связь объекта с поршнем
-            RaycastHit2D hit = Physics2D.Raycast(rayStart,Vector2.down,5f,m);
+            RaycastHit2D hit = Physics2D.Raycast(rayStart,pistonDirection,5f,m);
             pulledObjPos = hit.transform.position;
             pulledObject = hit.collider.gameObject;
             
