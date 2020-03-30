@@ -85,6 +85,8 @@
      <Compile Include="Assets\Resources\Scripts\UI Scripts\DisableMenu.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\DropdownItemsSetup.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\Exit.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI Scripts\HPBarHPDisplay.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI Scripts\HealthBarInit.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\LevelSelector.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\LevelUnlockSpriteChange.cs" />
      <Compile Include="Assets\Resources\Scripts\UI Scripts\SceneLoader.cs" />

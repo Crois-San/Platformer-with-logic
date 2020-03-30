@@ -36,6 +36,8 @@
               <e p="DisableMenu.cs" t="Include" />
               <e p="DropdownItemsSetup.cs" t="Include" />
               <e p="Exit.cs" t="Include" />
+              <e p="HealthBarInit.cs" t="Include" />
+              <e p="HPBarHPDisplay.cs" t="Include" />
               <e p="LevelSelector.cs" t="Include" />
               <e p="LevelUnlockSpriteChange.cs" t="Include" />
               <e p="SceneLoader.cs" t="Include" />
