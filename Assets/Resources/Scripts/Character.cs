@@ -93,15 +93,15 @@ public class Character : MonoBehaviour
              * Строка ниже запускает персонажа вверх при прыжке,
              * со скоростью jumpspeed.
              */
-            if ((fJumpPressedRemember > 0) && (fGroundedRemember > 0))
-            {
+            //if ((fJumpPressedRemember > 0) && (fGroundedRemember > 0))
+            //{
                 fJumpPressedRemember = 0;
                 fGroundedRemember = 0;
                 body.AddForce(SpeedMultiplier*jumpspeed * Time.deltaTime *Vector2.up, ForceMode2D.Impulse);
                 ssJump.MakeSound();
                 jumpRequest = false;
                 grounded = false;
-            }
+            //}
             
         }
         else
@@ -110,13 +110,14 @@ public class Character : MonoBehaviour
              * строка ниже участвует в проверке касания земли,
              * определяет положение, из которого начинается проверка
              */
-            Vector2 boxCenter = (Vector2) body.transform.position + 0.5f * (characterSize.y + boxSize.y) * Vector2.down;
+            Vector2 boxCenter = (Vector2) body.transform.position + 0.5f * (characterSize.y*transform.localScale.y + boxSize.y) * Vector2.down;
             /*
              * Собственно проверка касания земли,
              * OverlapBox проверяет, есть ли коллайдеры в определенной области,
              * если есть, возвращает true.
              */
             grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask));
+            Debug.DrawLine(boxCenter,boxCenter * groundedSkin);
         }
         fGroundedRemember -= Time.deltaTime;
         if (grounded)
