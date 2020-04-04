@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 [Serializable]
@@ -24,6 +25,10 @@ public abstract class LogicalElement : MonoBehaviour
 
 	[SerializeField]
 	protected LogicalElement le2;
+	
+	[field: SerializeField]
+	public GameObject wire { get; set; }
+	public Transform wireOutp { get; set; }
 
 	//Рендерер спрайтов, нужен для переключения спрайтов состояний элемента
 	protected SpriteRenderer sr;
@@ -47,10 +52,27 @@ public abstract class LogicalElement : MonoBehaviour
 		return state;
 	}
 
+	public void SetWire(LogicalElement input)
+	{
+		if (input != null && !(gameObject.GetComponent<LogicalElement>() is LogicalWire))
+		{
+			wire = Resources.Load("Prefabs/Logical Wire") as GameObject;
+			wire = Instantiate(wire);
+			wire.name = input.name + " - " + gameObject.name;
+			wire.GetComponent<LogicalWire>().SetLe1 = input;
+			wire.GetComponent<LogicalWire>().SetLe2 = gameObject.GetComponent<LogicalElement>();
+			wire.SetActive(true);
+
+		}
+	}
+
 	protected virtual void Start()
 	{
 		sr = GetComponent<SpriteRenderer>();
 		ss = new SoundSystemDefaultLooping(gameObject,Sounds.LogicalElementBuzz, 0.048f);
+		SetWire(le1);
+		SetWire(le2);
+		
 	}
 	protected virtual void Update()
 	{

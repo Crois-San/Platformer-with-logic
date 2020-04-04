@@ -112,8 +112,9 @@ public class LogicalPiston : LogicalMechanism
         }
     }
     
-    private void Start()
+    protected void Start()
     {
+        base.Start();
         //определение точки, из которой начинается поиск объекта 
         rayStart = gameObject.transform.position;
         pistonRotation = gameObject.transform.rotation.eulerAngles;

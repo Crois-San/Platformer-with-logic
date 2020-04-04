@@ -34,6 +34,15 @@ public class LogicalWire : LogicalElement
     {
         set => outp = value;
     }
+
+    public LogicalElement SetLe1
+    {
+        set => le1 = value;
+    }
+    public LogicalElement SetLe2
+    {
+        set => le2 = value;
+    }
     
     //геттеры
     public LogicalElement GetLe1 => le1;
@@ -85,6 +94,14 @@ public class LogicalWire : LogicalElement
         //берет координаты точки выхода в элементе выхода
         if(le1 == null) return;
         inp = le1.gameObject.transform.Find("outPoint");
+        if (le1 == le2.GetLE1)
+        {
+            outp = le2.gameObject.transform.Find("inPoint 1");
+        }
+        else
+        {
+            outp = le2.gameObject.transform.Find("inPoint 2");
+        }
     }
 
     // Update is called once per frame

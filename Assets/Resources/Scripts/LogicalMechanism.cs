@@ -7,7 +7,8 @@ public class LogicalMechanism : LogicalElement
     // Start is called before the first frame update
     protected override void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        //sr = GetComponent<SpriteRenderer>();
+        base.Start();
     }
 
     protected override void Update()
