@@ -22,6 +22,9 @@ public class SoundSystemDefault : ISoundSystem
          SoundSource = SourceObject.AddComponent<AudioSource>();
          SoundSource.clip = sounds.Sound;
          SoundSource.volume = volume;
+         SoundSource.spatialize = true;
+         SoundSource.spatialBlend = 0.5f;
+         SoundSource.maxDistance = 16;
          SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
 
      }
@@ -51,6 +54,9 @@ public class SoundSystemDefaultLooping : ISoundSystem
         SoundSource = SourceObject.AddComponent<AudioSource>();
         SoundSource.clip = sounds.Sound;
         SoundSource.volume = volume;
+        SoundSource.spatialize = true;
+        SoundSource.spatialBlend = 0.75f;
+        SoundSource.maxDistance = 32;
         SoundSource.loop = true;
         SoundSource.outputAudioMixerGroup = Resources.Load<AudioMixer>("MasterMixer").FindMatchingGroups("Master")[0];
 

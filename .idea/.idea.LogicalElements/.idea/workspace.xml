@@ -2,43 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="865bbe36-cf08-43c6-9a6f-51e33d49f70d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LogicalElements/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Logical Wire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalMechanism.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalMechanism.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/SoundSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/SoundSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level01.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/03/0379b71f3093dd5d576b02f337e62172" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/05d4c4dcf6cb5f05778cc260c07fadc9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/14/14923b4a5050083341895081bcaef497" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1f/1f86373a07a8cc19fd0f302fd4c41123" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/28/2838a564e9c159d387fe5731a8e2c57b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3e/3e1fb5c6b9293367d5ee3ff15f322105" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/40/40e5bb5d0baaff3dbf1763b84b011494" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4b/4b1eb969578ce743a2be88fa220de05a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4f/4f526f4df76f625e9971746e7f9d00df" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/53/5342b0c0d0707f49f957e53a8bdb30eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5e/5e4f9fdf52b54f9b3a0a176df3898c49" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/80/80b40d3ff042893b749ec7124a8f7113" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/8261a128e9f903cdcda51866a523e4c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e9/e9ec87156ef18cfb983f9b17fa6d4b56" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/GameTest.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/d562dc-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/7e0eef-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/GameTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +110,6 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/CameraMenuTransition.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/DisableMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/ShowSettingPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/SoundSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/SetVolume.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/VideoSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/LevelUnlockSpriteChange.cs" />
@@ -142,11 +118,12 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/OnLevelCompleteAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/HPBarHPDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/HealthBarInit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalMechanism.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/LogicalPiston.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/SoundSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Character.cs" />
       </list>
     </option>
   </component>
@@ -245,6 +222,7 @@
       <workItem from="1585578981729" duration="2731000" />
       <workItem from="1585594924778" duration="2434000" />
       <workItem from="1585916697518" duration="8560000" />
+      <workItem from="1586215035070" duration="5437000" />
     </task>
     <servers />
   </component>

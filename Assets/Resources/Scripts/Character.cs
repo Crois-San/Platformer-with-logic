@@ -15,9 +15,9 @@ public class Character : MonoBehaviour
     public float fade { get; set; } = 1.3f;
 
     //скорость движения персонажа
-    [SerializeField] 
+    [field:SerializeField] 
     public float speed { get; protected set; } = 0.3f;
-
+    
     protected const int SpeedMultiplier = 50;
 
     //модификатор гравитации
@@ -49,6 +49,8 @@ public class Character : MonoBehaviour
 
     protected bool grounded;
 
+    protected bool facingRight { get; set; } = true;
+
     protected Vector2 boxSize;
 
     protected Vector2 characterSize;
@@ -79,8 +81,21 @@ public class Character : MonoBehaviour
     {
         //Строка ниже перемещает персонажа в направлении move и со скоростью speed
         body.transform.Translate(move * speed * Time.deltaTime*SpeedMultiplier, 0f, 0f, Space.Self);
+        //body.AddForce(new Vector2(move * speed * Time.deltaTime * SpeedMultiplier, 0f), ForceMode2D.Impulse);
         //инвертирует спрайт в зависимости от направления движения
-        sr.flipX = move < 0.0f;
+        Flip(move);
+    }
+
+    public void Flip(float move)
+    {
+        if (move > 0 && !facingRight || move < 0 && facingRight)
+        {
+            facingRight = !facingRight;
+
+            var scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
 
     //функция прыжка
@@ -117,7 +132,6 @@ public class Character : MonoBehaviour
              * если есть, возвращает true.
              */
             grounded = (Physics2D.OverlapBox(boxCenter, boxSize, 0f, mask));
-            Debug.DrawLine(boxCenter,boxCenter * groundedSkin);
         }
         fGroundedRemember -= Time.deltaTime;
         if (grounded)
@@ -175,12 +189,7 @@ public class Character : MonoBehaviour
     {
         //звуки ходьбы персонажа
         ssMovement.MakeSound();
-        /*
-         * Возвращает 1 или -1 в зависимости от направления движения.
-         * Нажатие A или D на клавиатуре определяет направление движения
-         */
-        moving = Input.GetAxis("Moving");
-        Moving(moving);
+        
         /*
          * Если нажата кнопка W, персонаж прыгнет,
          * он может прыгать только, если касается земли
@@ -195,6 +204,12 @@ public class Character : MonoBehaviour
     //Эта функция как Update(), но нужна для вычисления физики
     protected virtual void FixedUpdate()
     {
+        /*
+         * Возвращает 1 или -1 в зависимости от направления движения.
+         * Нажатие A или D на клавиатуре определяет направление движения
+         */
+        moving = Input.GetAxis("Moving");
+        Moving(moving);
         Jumping();
     }
 }
