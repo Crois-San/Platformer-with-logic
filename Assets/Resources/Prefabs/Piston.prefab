@@ -107,10 +107,11 @@ MonoBehaviour:
   off: {fileID: 0}
   le1: {fileID: 0}
   le2: {fileID: 0}
+  <wire>k__BackingField: {fileID: 0}
   m:
     serializedVersion: 2
     m_Bits: 1
-  pushDistance: 1.5
+  pushDistance: 0.94
 --- !u!61 &7747443134150071583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
   - {x: -0.5042584, y: 0.48573887, z: 0}
   m_ShapePathHash: -912587427
   m_Mesh: {fileID: 0}
-  m_InstanceId: 25870
+  m_InstanceId: -67378
 --- !u!95 &6890170901433983032
 Animator:
   serializedVersion: 3
@@ -449,7 +450,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6767980015796128455}
   - component: {fileID: 2278598245605526882}
-  m_Layer: 0
+  - component: {fileID: 2863802918548858684}
+  m_Layer: 12
   m_Name: pistonHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,3 +522,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2863802918548858684
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648870465949530464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00078582764, y: 0.000613749}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.0588236}
+    newSize: {x: 1, y: 1.0588236}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5296097, y: 1.0575961}
+  m_EdgeRadius: 0

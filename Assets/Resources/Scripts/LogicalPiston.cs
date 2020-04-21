@@ -25,7 +25,7 @@ public class LogicalPiston : LogicalMechanism
     [SerializeField]
     private LayerMask m;
     //расстояние, на которое поршень может двигать объект
-    [Range(1,5)] [SerializeField]
+    [Range(0,5)] [SerializeField]
     private float pushDistance;
 
     //объект для анимации поршня
@@ -69,7 +69,7 @@ public class LogicalPiston : LogicalMechanism
     void PistonAction(LogicalElement A)
     {
         state = A.state;
-        isConnected = Physics2D.Raycast(rayStart, pistonDirection,5f,m);
+        isConnected = Physics2D.Raycast(rayStart, pistonDirection,5f*transform.localScale.x,m);
 
         //движение происходит только если объект связан с поршнем
         if (isConnected)
@@ -115,6 +115,7 @@ public class LogicalPiston : LogicalMechanism
     protected void Start()
     {
         base.Start();
+        pushDistance *= transform.localScale.x;
         //определение точки, из которой начинается поиск объекта 
         rayStart = gameObject.transform.position;
         pistonRotation = gameObject.transform.rotation.eulerAngles;
@@ -132,7 +133,7 @@ public class LogicalPiston : LogicalMechanism
          * При коллизии с объектом, связывает его с поршнем.
          * Также возврщает true в isConnected.
          */
-        isConnected = Physics2D.Raycast(rayStart,pistonDirection,5f,m);
+        isConnected = Physics2D.Raycast(rayStart,pistonDirection,5f*transform.localScale.x,m);
         if (isConnected)
         {
             //связь объекта с поршнем

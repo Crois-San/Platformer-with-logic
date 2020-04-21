@@ -50,6 +50,7 @@
         </e>
         <e p="Tests" t="Include">
           <e p="ExampleTest.cs" t="Include" />
+          <e p="FinalTest.cs" t="Include" />
           <e p="ItemsTests.cs" t="Include" />
           <e p="Tests.asmdef" t="Include" />
         </e>
