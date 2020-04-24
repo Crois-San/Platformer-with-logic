@@ -1020,6 +1020,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Sounds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/UI Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.2.1/Editor/2D/SortingLayerDropDown.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -1176,7 +1177,7 @@
       <workItem from="1586215035070" duration="5437000" />
       <workItem from="1586220658494" duration="688000" />
       <workItem from="1586221491395" duration="511000" />
-      <workItem from="1587499731110" duration="649000" />
+      <workItem from="1587499731110" duration="1370000" />
     </task>
     <servers />
   </component>
